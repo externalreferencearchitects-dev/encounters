@@ -598,6 +598,42 @@ em.accent { font-style: normal; color: var(--coral); }
   .lab-grid       { grid-template-columns: repeat(3, 1fr); }
   .nav-links      { display: none; }
 }
+
+/* Portrait mobile — show renders at 16:9 so landscape images aren't cropped */
+@media (max-width: 767px) and (orientation: portrait) {
+  .render          { height: 56.25vw; min-height: 220px; }
+  .compare-section { height: 56.25vw; min-height: 220px; }
+}
+/* ── LIGHTBOX ────────────────────────── */
+.lightbox {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 92vw; max-height: 92vh;
+  object-fit: contain;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+  cursor: default;
+}
+.lightbox-close {
+  position: absolute; top: 1.2rem; right: 1.5rem;
+  background: rgba(255,255,255,0.12); border: none;
+  color: rgba(255,255,255,0.8);
+  font-size: 1.2rem; line-height: 1;
+  width: 36px; height: 36px;
+  border-radius: 50%; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.25); color: white; }
+.lab-item img { cursor: zoom-in; }
+
 @media (max-width: 540px) {
   .section-white, .section-black, .section-grey { padding: 4.5rem 0; }
   .cards-4 { grid-template-columns: 1fr; }

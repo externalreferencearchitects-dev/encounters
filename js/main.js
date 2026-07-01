@@ -86,6 +86,34 @@
   });
 })();
 
+// MATERIAL LAB LIGHTBOX
+(function () {
+  const lb    = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightboxImg');
+  const lbCls = document.getElementById('lightboxClose');
+  if (!lb) return;
+
+  document.querySelectorAll('.lab-item img').forEach(img => {
+    img.addEventListener('click', e => {
+      e.stopPropagation();
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function close() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+
+  lb.addEventListener('click', close);
+  lbCls.addEventListener('click', e => { e.stopPropagation(); close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+})();
+
 // SMOOTH ANCHORS
 (function () {
   document.querySelectorAll('a[href^="#"]').forEach(a => {
