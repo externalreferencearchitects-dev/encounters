@@ -6,14 +6,17 @@
   <title>The Shelter of Becoming — Primavera Sound 2027</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <nav id="nav">
+    <button class="hamb" id="hamb" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span>
+    </button>
     <a href="#s-hero" class="nav-logo">The Shelter of Becoming</a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="#s-materials">Materials</a>
       <a href="#s-cycles">Cycles</a>
       <a href="#s-lab">Lab</a>
@@ -24,9 +27,14 @@
 
   <!-- HERO -->
   <section class="hero" id="s-hero">
-    <p class="hero-eyebrow" data-reveal>Urban Festivals Go Circular</p>
-    <h1 class="hero-title" data-reveal>The Shelter<br>of <em class="accent">Becoming</em></h1>
-    <p class="hero-sub" data-reveal>Primavera Sound · Barcelona · 3–7 June 2027</p>
+    <div class="hero-bg" aria-hidden="true">
+      <img src="images/night-view.jpg" alt="">
+    </div>
+    <div class="container">
+      <p class="section-label" data-reveal>Urban Festivals Go Circular</p>
+      <h1 class="hero-title" data-reveal>The Shelter<br>of <em class="accent">Becoming</em></h1>
+      <p class="hero-sub" data-reveal>Primavera Sound · Barcelona · 3–7 June 2027</p>
+    </div>
     <a href="#s-intro" class="hero-scroll" aria-label="Scroll down">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
         <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -57,7 +65,7 @@
   </section>
 
   <!-- INTRO -->
-  <section class="section-white" id="s-intro">
+  <section class="sec sec--dark" id="s-intro">
     <div class="container container--narrow">
       <p class="section-label" data-reveal>The Installation</p>
       <h2 class="section-title" data-reveal>Built from what<br>the city <em class="accent">discards.</em></h2>
@@ -74,11 +82,11 @@
   </section>
 
   <!-- BIOMATERIALS -->
-  <section class="section-black" id="s-materials">
+  <section class="sec sec--dark" id="s-materials">
     <div class="container">
-      <p class="section-label section-label--lt" data-reveal>Biomaterials</p>
-      <h2 class="section-title section-title--lt" data-reveal>Shells that<br>become <em class="accent">shelter.</em></h2>
-      <p class="intro-body intro-body--lt" data-reveal>Four materials normally associated with disposal, transformed into surfaces of encounter and environmental storytelling.</p>
+      <p class="section-label" data-reveal>Biomaterials</p>
+      <h2 class="section-title" data-reveal>Shells that<br>become <em class="accent">shelter.</em></h2>
+      <p class="intro-body" data-reveal>Four materials normally associated with disposal, transformed into surfaces of encounter and environmental storytelling.</p>
       <div class="cards-4">
         <div class="card card--dark" data-reveal>
           <div class="card-photo">
@@ -160,7 +168,7 @@
   </section>
 
   <!-- COLOUR PROPOSAL A — Detail 1 -->
-  <section class="colour-intro section-black">
+  <section class="sec sec--dark colour-intro">
     <div class="container container--narrow">
       <p class="section-label" data-reveal>Colour Proposals · Surface A</p>
       <h2 class="section-title" data-reveal>Two proposed<br><em class="accent">colour sets.</em></h2>
@@ -189,7 +197,7 @@
   </section>
 
   <!-- CYCLES -->
-  <section class="section-white" id="s-cycles">
+  <section class="sec sec--light" id="s-cycles">
     <div class="container container--narrow">
       <p class="section-label" data-reveal>Two Metabolisms</p>
       <h2 class="section-title" data-reveal>Nothing is designed<br>to be discarded.</h2>
@@ -210,16 +218,16 @@
             <path d="M 195 213 A 85 85 0 0 1 85 213" stroke="#52b26b" stroke-width="2" marker-end="url(#gc-arr)"/>
             <path d="M 56 163 A 85 85 0 0 1 111 68" stroke="#52b26b" stroke-width="2" marker-end="url(#gc-arr)"/>
             <circle cx="140" cy="63" r="30" fill="#52b26b"/>
-            <text x="140" y="59" text-anchor="middle" fill="white" font-size="11.5" font-family="Inter,sans-serif" font-weight="600">Grow</text>
-            <text x="140" y="72" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Inter,sans-serif">organic</text>
+            <text x="140" y="59" text-anchor="middle" fill="white" font-size="11.5" font-family="Hanken Grotesk,sans-serif" font-weight="600">Grow</text>
+            <text x="140" y="72" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Hanken Grotesk,sans-serif">organic</text>
             <circle cx="214" cy="191" r="30" fill="#52b26b"/>
-            <text x="214" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Inter,sans-serif" font-weight="600">Decay</text>
-            <text x="214" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Inter,sans-serif">compost</text>
+            <text x="214" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Hanken Grotesk,sans-serif" font-weight="600">Decay</text>
+            <text x="214" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Hanken Grotesk,sans-serif">compost</text>
             <circle cx="66" cy="191" r="30" fill="#52b26b"/>
-            <text x="66" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Inter,sans-serif" font-weight="600">Regrow</text>
-            <text x="66" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Inter,sans-serif">nature</text>
-            <text x="140" y="141" text-anchor="middle" fill="#52b26b" font-size="11" font-family="Inter,sans-serif" font-weight="600">Green</text>
-            <text x="140" y="157" text-anchor="middle" fill="#52b26b" font-size="11" font-family="Inter,sans-serif" font-weight="600">Cycle</text>
+            <text x="66" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Hanken Grotesk,sans-serif" font-weight="600">Regrow</text>
+            <text x="66" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Hanken Grotesk,sans-serif">nature</text>
+            <text x="140" y="141" text-anchor="middle" fill="#52b26b" font-size="11" font-family="Hanken Grotesk,sans-serif" font-weight="600">Green</text>
+            <text x="140" y="157" text-anchor="middle" fill="#52b26b" font-size="11" font-family="Hanken Grotesk,sans-serif" font-weight="600">Cycle</text>
           </svg>
           <div class="cycle-meta">
             <span class="cycle-tag" style="color:#52b26b">Green Cycle</span>
@@ -241,16 +249,16 @@
             <path d="M 195 213 A 85 85 0 0 1 85 213" stroke="#4a90d9" stroke-width="2" marker-end="url(#bc-arr)"/>
             <path d="M 56 163 A 85 85 0 0 1 111 68" stroke="#4a90d9" stroke-width="2" marker-end="url(#bc-arr)"/>
             <circle cx="140" cy="63" r="30" fill="#4a90d9"/>
-            <text x="140" y="59" text-anchor="middle" fill="white" font-size="11.5" font-family="Inter,sans-serif" font-weight="600">Build</text>
-            <text x="140" y="72" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Inter,sans-serif">structure</text>
+            <text x="140" y="59" text-anchor="middle" fill="white" font-size="11.5" font-family="Hanken Grotesk,sans-serif" font-weight="600">Build</text>
+            <text x="140" y="72" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Hanken Grotesk,sans-serif">structure</text>
             <circle cx="214" cy="191" r="30" fill="#4a90d9"/>
-            <text x="214" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Inter,sans-serif" font-weight="600">Unbuild</text>
-            <text x="214" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Inter,sans-serif">dismantle</text>
+            <text x="214" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Hanken Grotesk,sans-serif" font-weight="600">Unbuild</text>
+            <text x="214" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Hanken Grotesk,sans-serif">dismantle</text>
             <circle cx="66" cy="191" r="30" fill="#4a90d9"/>
-            <text x="66" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Inter,sans-serif" font-weight="600">Reuse</text>
-            <text x="66" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Inter,sans-serif">new life</text>
-            <text x="140" y="141" text-anchor="middle" fill="#4a90d9" font-size="11" font-family="Inter,sans-serif" font-weight="600">Blue</text>
-            <text x="140" y="157" text-anchor="middle" fill="#4a90d9" font-size="11" font-family="Inter,sans-serif" font-weight="600">Cycle</text>
+            <text x="66" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Hanken Grotesk,sans-serif" font-weight="600">Reuse</text>
+            <text x="66" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Hanken Grotesk,sans-serif">new life</text>
+            <text x="140" y="141" text-anchor="middle" fill="#4a90d9" font-size="11" font-family="Hanken Grotesk,sans-serif" font-weight="600">Blue</text>
+            <text x="140" y="157" text-anchor="middle" fill="#4a90d9" font-size="11" font-family="Hanken Grotesk,sans-serif" font-weight="600">Cycle</text>
           </svg>
           <div class="cycle-meta">
             <span class="cycle-tag" style="color:#4a90d9">Blue Cycle</span>
@@ -269,7 +277,7 @@
   </section>
 
   <!-- EXPERIENCE -->
-  <section class="section-white">
+  <section class="sec sec--dark">
     <div class="container container--narrow">
       <p class="section-label" data-reveal>Inside the Festival</p>
       <h2 class="section-title" data-reveal>Rest inside change.</h2>
@@ -281,7 +289,7 @@
   </section>
 
   <!-- COLOUR PROPOSAL B — Detail 2 -->
-  <section class="colour-intro section-black">
+  <section class="sec sec--dark colour-intro">
     <div class="container container--narrow">
       <p class="section-label" data-reveal>Colour Proposals · Surface B</p>
       <h2 class="section-title" data-reveal>Warm amber or<br>cool <em class="accent">blue?</em></h2>
@@ -310,7 +318,7 @@
   </section>
 
   <!-- MATERIAL LAB -->
-  <section class="section-grey" id="s-lab">
+  <section class="sec sec--light" id="s-lab">
     <div class="container">
       <p class="section-label" data-reveal>Material Research</p>
       <h2 class="section-title" data-reveal>From the kitchen<br>to architecture.</h2>
@@ -356,30 +364,28 @@
     </div>
   </section>
 
-  <!-- THE FLOORING -->
+  <!-- THE FLOORING — green split section -->
   <section class="flooring-section" id="s-flooring">
-    <div class="container">
+    <div class="flooring-text">
       <p class="section-label" data-reveal>The Floor</p>
       <h2 class="section-title" data-reveal>Ground made<br>from <em class="accent">shells.</em></h2>
-      <div class="flooring-grid">
-        <div class="flooring-img" data-reveal>
-          <img src="images/flooring.jpg" alt="Eggshell and mussel shell composite — hexagonal tile flooring">
-        </div>
-        <div class="flooring-text" data-reveal>
-          <h3>Eggshell + Mussel Composite</h3>
-          <p>Hexagonal tiles formed from ground mussel shells and calcium-rich eggshells, cast with a natural binder into a modular flooring system. Each tile carries the memory of the materials that built it.</p>
-          <p>The hexagonal geometry allows for flexible layouts and seamless joining without adhesives — fully aligned with the design-to-disassemble protocol. After the festival, tiles are collected and composted.</p>
-          <span class="material-tag">
-            <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/></svg>
-            Eggshell + Mussel · Green Cycle Material
-          </span>
-        </div>
+      <div data-reveal>
+        <h3>Eggshell + Mussel Composite</h3>
+        <p>Hexagonal tiles formed from ground mussel shells and calcium-rich eggshells, cast with a natural binder into a modular flooring system. Each tile carries the memory of the materials that built it.</p>
+        <p>The hexagonal geometry allows for flexible layouts and seamless joining without adhesives — fully aligned with the design-to-disassemble protocol. After the festival, tiles are collected and composted.</p>
+        <span class="material-tag">
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/></svg>
+          Eggshell + Mussel · Green Cycle Material
+        </span>
       </div>
+    </div>
+    <div class="flooring-img">
+      <img src="images/flooring.jpg" alt="Eggshell and mussel shell composite — hexagonal tile flooring">
     </div>
   </section>
 
   <!-- SUSTAINABILITY TABS -->
-  <section class="section-white" id="s-sustainability">
+  <section class="sec sec--dark" id="s-sustainability">
     <div class="container container--narrow">
       <p class="section-label" data-reveal>Sustainability Protocol</p>
       <h2 class="section-title" data-reveal>The framework<br>behind the shelter.</h2>
@@ -519,9 +525,9 @@
   </section>
 
   <!-- PRINCIPLES -->
-  <section class="section-black" id="s-principles">
+  <section class="sec sec--light" id="s-principles">
     <div class="container container--narrow">
-      <p class="section-label section-label--lt" data-reveal>What We Stand For</p>
+      <p class="section-label" data-reveal>What We Stand For</p>
       <div class="principles">
         <div class="p-line" data-reveal><span class="p-n">01</span><span>Design cycles, not waste.</span></div>
         <div class="p-line" data-reveal><span class="p-n">02</span><span>Waste becomes resource.</span></div>
@@ -534,7 +540,11 @@
   </section>
 
   <!-- PITCH -->
-  <section class="section-white" id="s-pitch">
+  <section class="sec sec--dark pitch-section" id="s-pitch">
+    <svg class="pitch-deco" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+      <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 5"/>
+      <path d="M50 4v92M10.2 27l79.6 46M89.8 27l-79.6 46" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
     <div class="container container--narrow">
       <p class="section-label" data-reveal>A Proposal for Primavera Sound 2027</p>
       <h2 class="pitch-title" data-reveal>A temporary shelter<br>that becomes a <em class="accent">model.</em></h2>
@@ -552,14 +562,14 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER — white, centered wordmark + column band -->
   <footer id="footer">
     <div class="container">
+      <div class="footer-top">
+        <p class="footer-logo">The Shelter of Becoming</p>
+        <p class="footer-tagline">Urban Festivals Go Circular<br>Primavera Sound · Barcelona · 3–7 June 2027</p>
+      </div>
       <div class="footer-grid">
-        <div class="footer-col footer-col--brand">
-          <p class="footer-logo">The Shelter<br>of Becoming</p>
-          <p class="footer-tagline">Urban Festivals Go Circular<br>Primavera Sound · Barcelona 2027</p>
-        </div>
         <div class="footer-col">
           <span class="footer-heading">Project</span>
           <a href="#s-materials">Biomaterials</a>

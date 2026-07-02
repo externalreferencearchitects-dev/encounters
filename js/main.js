@@ -25,12 +25,34 @@
   });
 })();
 
-// NAV — becomes white/solid on scroll
+// NAV — solid glass background on scroll
 (function () {
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('solid', window.scrollY > 60);
   }, { passive: true });
+})();
+
+// NAV — mobile hamburger
+(function () {
+  const nav  = document.getElementById('nav');
+  const hamb = document.getElementById('hamb');
+  if (!nav || !hamb) return;
+
+  function setOpen(open) {
+    nav.classList.toggle('open', open);
+    hamb.setAttribute('aria-expanded', String(open));
+    hamb.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  hamb.addEventListener('click', () => setOpen(!nav.classList.contains('open')));
+  nav.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => setOpen(false));
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) setOpen(false);
+  });
 })();
 
 // SCROLL REVEAL
@@ -121,7 +143,8 @@
       const t = document.querySelector(a.getAttribute('href'));
       if (!t) return;
       e.preventDefault();
-      t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
     });
   });
 })();
