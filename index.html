@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ENCOUNTERS — A space where ecology matters. Primavera Sound 2027</title>
+  <title data-i18n-title>ENCOUNTERS — A space where ecology matters. Primavera Sound 2027</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -18,18 +18,30 @@
     <a href="#s-hero" class="nav-logo">ENCOUNTERS</a>
     <div class="nav-links" id="navLinks">
       <div class="nav-dropdown">
-        <a href="#s-proposals" class="nav-dropdown-trigger">Designs</a>
+        <a href="#s-proposals" class="nav-dropdown-trigger" data-i18n="nav-designs">Designs</a>
         <div class="nav-dropdown-panel">
-          <a href="#s-concept-nest"><span class="nav-dropdown-name">Nest</span><span class="nav-dropdown-desc">Woven scale skin, hexagonal floor</span></a>
-          <a href="#s-concept-breath"><span class="nav-dropdown-name">Breath</span><span class="nav-dropdown-desc">Solar-adaptive lattice facade</span></a>
-          <a href="#s-concept-stillness"><span class="nav-dropdown-name">Stillness</span><span class="nav-dropdown-desc">Hanging sphere canopy, low-sensory refuge</span></a>
+          <a href="#s-concept-nest"><span class="nav-dropdown-name">Nest</span><span class="nav-dropdown-desc" data-i18n="nav-nest-desc">Woven scale skin, hexagonal floor</span></a>
+          <a href="#s-concept-breath"><span class="nav-dropdown-name">Breath</span><span class="nav-dropdown-desc" data-i18n="nav-breath-desc">Solar-adaptive lattice facade</span></a>
+          <a href="#s-concept-stillness"><span class="nav-dropdown-name">Stillness</span><span class="nav-dropdown-desc" data-i18n="nav-stillness-desc">Hanging sphere canopy, low-sensory refuge</span></a>
         </div>
       </div>
-      <a href="#s-materials">Materials</a>
-      <a href="#s-cycles">Cycles</a>
-      <a href="#s-lab">Lab</a>
-      <a href="#s-sustainability">Protocol</a>
+      <a href="#s-materials" data-i18n="nav-materials">Materials</a>
+      <a href="#s-cycles" data-i18n="nav-cycles">Cycles</a>
+      <a href="#s-lab" data-i18n="nav-lab">Lab</a>
+      <a href="#s-sustainability" data-i18n="nav-protocol">Protocol</a>
       <a href="#s-pitch" class="nav-cta">PS 2027</a>
+      <div class="lang-switch">
+        <button class="lang-trigger" id="langTrigger" aria-label="Change language" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M3 12h18M12 3c2.3 2.5 3.6 5.6 3.6 9s-1.3 6.5-3.6 9c-2.3-2.5-3.6-5.6-3.6-9s1.3-6.5 3.6-9z"/>
+          </svg>
+        </button>
+        <div class="lang-panel" id="langPanel">
+          <button class="lang-option active" data-lang="en" type="button">English</button>
+          <button class="lang-option" data-lang="es" type="button">Español</button>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -38,8 +50,8 @@
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-plate container">
       <div class="hero-label" data-reveal>
-        <p class="hero-kicker">A space where <em class="accent">ecology</em> matters.</p>
-        <p class="hero-meta">Primavera Sound · Barcelona · 3–7 June 2027</p>
+        <p class="hero-kicker" data-i18n="hero-kicker">A space where <em class="accent">ecology</em> matters.</p>
+        <p class="hero-meta" data-i18n="hero-meta">Primavera Sound · Barcelona · 3–7 June 2027</p>
       </div>
       <div class="hero-base" data-reveal>
         <h1 class="hero-title">ENCOUNTERS</h1>
@@ -56,11 +68,11 @@
   <!-- INTRO -->
   <section class="sec sec--dark" id="s-intro">
     <div class="container container--narrow">
-      <p class="section-label" data-reveal><span>The installation</span><span class="badge-dash" aria-hidden="true"></span><span>01</span><span class="badge-dot" aria-hidden="true"></span></p>
-      <h2 class="section-title" data-reveal>Built from what<br>the city <em class="accent">discards.</em></h2>
+      <p class="section-label" data-reveal><span data-i18n="intro-label">The installation</span><span class="badge-dash" aria-hidden="true"></span><span>01</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <h2 class="section-title" data-reveal data-i18n="intro-title">Built from what<br>the city <em class="accent">discards.</em></h2>
       <div class="body-cols" data-reveal>
-        <p>An ephemeral architectural installation built from urban organic waste transformed into biomaterials. A shelter to rest, play, and reflect — a moment of stillness within the festival.</p>
-        <p>The shelter transforms a fragment of the festival into a living room for the commons: a soft landscape where architecture is not an object to admire, but an experience lived through the body and the senses. Inside the pavilion, artworks and collaborations with artists create moments of encounter and reflection.</p>
+        <p data-i18n="intro-body1">An ephemeral architectural installation built from urban organic waste transformed into biomaterials. A shelter to rest, play, and reflect — a moment of stillness within the festival.</p>
+        <p data-i18n="intro-body2">The shelter transforms a fragment of the festival into a living room for the commons: a soft landscape where architecture is not an object to admire, but an experience lived through the body and the senses. Inside the pavilion, artworks and collaborations with artists create moments of encounter and reflection.</p>
       </div>
     </div>
   </section>
@@ -68,9 +80,9 @@
   <!-- ===== THREE PROPOSALS OVERVIEW ===== -->
   <section class="sec sec--dark proposals-overview" id="s-proposals">
     <div class="container container--narrow">
-      <p class="section-label" data-reveal><span>Design proposals</span><span class="badge-dash" aria-hidden="true"></span><span>02</span><span class="badge-dot" aria-hidden="true"></span></p>
-      <h2 class="section-title" data-reveal>Three visions,<br>one <em class="accent">circular</em> language.</h2>
-      <p class="intro-body" data-reveal>We propose three architectural directions for the shelter — each a distinct spatial and material interpretation of the same circular principles.</p>
+      <p class="section-label" data-reveal><span data-i18n="proposals-label">Design proposals</span><span class="badge-dash" aria-hidden="true"></span><span>02</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <h2 class="section-title" data-reveal data-i18n="proposals-title">Three visions,<br>one <em class="accent">circular</em> language.</h2>
+      <p class="intro-body" data-reveal data-i18n="proposals-body">We propose three architectural directions for the shelter — each a distinct spatial and material interpretation of the same circular principles.</p>
     </div>
     <div class="container">
       <div class="proposals-grid" data-reveal>
@@ -84,7 +96,7 @@
             <path d="M24 36 Q32 40 40 36" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
           </svg>
           <h3>Nest</h3>
-          <p>Central gathering beneath a woven bioplastic scale skin, grounded in hexagonal shell flooring.</p>
+          <p data-i18n="proposal-nest-desc">Central gathering beneath a woven bioplastic scale skin, grounded in hexagonal shell flooring.</p>
         </a>
         <a href="#s-concept-breath" class="proposal-card">
           <svg class="concept-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +106,7 @@
             <circle cx="32" cy="32" r="6" fill="currentColor" opacity="0.4"/>
           </svg>
           <h3>Breath</h3>
-          <p>A solar-responsive lattice of panels that open and close with the sun — a structure that breathes with the day.</p>
+          <p data-i18n="proposal-breath-desc">A solar-responsive lattice of panels that open and close with the sun — a structure that breathes with the day.</p>
         </a>
         <a href="#s-concept-stillness" class="proposal-card">
           <svg class="concept-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,7 +116,7 @@
             <path d="M24 42 L40 42" stroke="currentColor" stroke-width="1" opacity="0.5"/>
           </svg>
           <h3>Stillness</h3>
-          <p>A low-sensory refuge beneath a canopy of hanging biomaterial spheres — a quiet pod within the noise.</p>
+          <p data-i18n="proposal-stillness-desc">A low-sensory refuge beneath a canopy of hanging biomaterial spheres — a quiet pod within the noise.</p>
         </a>
       </div>
     </div>
@@ -122,10 +134,10 @@
           <circle cx="40" cy="28" r="2.5" fill="currentColor" opacity="0.7"/>
           <path d="M24 36 Q32 40 40 36" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
         </svg>
-        <p class="concept-name">Nest — Option 1</p>
+        <p class="concept-name" data-i18n="concept-nest-name">Nest — Option 1</p>
       </div>
-      <h2 class="section-title" data-reveal>Central gathering<br>with <em class="accent">hexagonal floors.</em></h2>
-      <p class="intro-body" data-reveal>A scaffold pavilion wrapped in a warm, tessellated bioplastic scale skin. Modular hexagonal flooring creates flexible seating and gathering zones beneath layered scales that filter light and sound.</p>
+      <h2 class="section-title" data-reveal data-i18n="concept-nest-title">Central gathering<br>with <em class="accent">hexagonal floors.</em></h2>
+      <p class="intro-body" data-reveal data-i18n="concept-nest-body">A scaffold pavilion wrapped in a warm, tessellated bioplastic scale skin. Modular hexagonal flooring creates flexible seating and gathering zones beneath layered scales that filter light and sound.</p>
     </div>
   </section>
 
@@ -151,8 +163,8 @@
           </svg>
         </div>
       </div>
-      <span class="compare-label compare-label--left">Day</span>
-      <span class="compare-label compare-label--right">Night</span>
+      <span class="compare-label compare-label--left" data-i18n="compare-day">Day</span>
+      <span class="compare-label compare-label--right" data-i18n="compare-night">Night</span>
     </div>
   </section>
 
@@ -164,9 +176,9 @@
   <!-- NEST: Colour Set A -->
   <section class="sec sec--dark colour-intro">
     <div class="container container--narrow">
-      <p class="section-label" data-reveal><span>Colour proposals</span><span class="badge-dash" aria-hidden="true"></span><span>Nest · Surface A</span><span class="badge-dot" aria-hidden="true"></span></p>
-      <h2 class="section-title" data-reveal>Two proposed<br><em class="accent">colour sets.</em></h2>
-      <p class="intro-body" data-reveal>Drag to compare the two colour directions proposed for the bioplastic scale panels. The same tessellated surface — two distinct pigmentation paths. Slide to decide.</p>
+      <p class="section-label" data-reveal><span data-i18n="colour-proposals-label">Colour proposals</span><span class="badge-dash" aria-hidden="true"></span><span data-i18n="nest-surfaceA-badge">Nest · Surface A</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <h2 class="section-title" data-reveal data-i18n="nest-colourA-title">Two proposed<br><em class="accent">colour sets.</em></h2>
+      <p class="intro-body" data-reveal data-i18n="nest-colourA-body">Drag to compare the two colour directions proposed for the bioplastic scale panels. The same tessellated surface — two distinct pigmentation paths. Slide to decide.</p>
     </div>
   </section>
   <section class="render compare-section">
@@ -185,17 +197,17 @@
           </svg>
         </div>
       </div>
-      <span class="compare-label compare-label--left">Colour Set A</span>
-      <span class="compare-label compare-label--right">Colour Set B</span>
+      <span class="compare-label compare-label--left" data-i18n="compare-colourA">Colour Set A</span>
+      <span class="compare-label compare-label--right" data-i18n="compare-colourB">Colour Set B</span>
     </div>
   </section>
 
   <!-- NEST: Colour Set B -->
   <section class="sec sec--dark colour-intro">
     <div class="container container--narrow">
-      <p class="section-label" data-reveal><span>Colour proposals</span><span class="badge-dash" aria-hidden="true"></span><span>Nest · Surface B</span><span class="badge-dot" aria-hidden="true"></span></p>
-      <h2 class="section-title" data-reveal>Warm amber or<br>cool <em class="accent">blue?</em></h2>
-      <p class="intro-body" data-reveal>The outer membrane can be cast in two directions: a warm yellow-orange palette drawn from harvest and fire, or a cooler yellow-blue hue referencing sky and sea. Drag to compare.</p>
+      <p class="section-label" data-reveal><span data-i18n="colour-proposals-label">Colour proposals</span><span class="badge-dash" aria-hidden="true"></span><span data-i18n="nest-surfaceB-badge">Nest · Surface B</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <h2 class="section-title" data-reveal data-i18n="nest-colourB-title">Warm amber or<br>cool <em class="accent">blue?</em></h2>
+      <p class="intro-body" data-reveal data-i18n="nest-colourB-body">The outer membrane can be cast in two directions: a warm yellow-orange palette drawn from harvest and fire, or a cooler yellow-blue hue referencing sky and sea. Drag to compare.</p>
     </div>
   </section>
   <section class="render compare-section">
@@ -214,23 +226,23 @@
           </svg>
         </div>
       </div>
-      <span class="compare-label compare-label--left">Yellow &amp; Orange</span>
-      <span class="compare-label compare-label--right">Yellow &amp; Blue</span>
+      <span class="compare-label compare-label--left" data-i18n="compare-yellow-orange">Yellow &amp; Orange</span>
+      <span class="compare-label compare-label--right" data-i18n="compare-yellow-blue">Yellow &amp; Blue</span>
     </div>
   </section>
 
   <!-- NEST: Flooring section -->
   <section class="flooring-section" id="s-flooring-nest">
     <div class="flooring-text">
-      <p class="section-label" data-reveal><span>The ground</span><span class="badge-dash" aria-hidden="true"></span><span>Nest foundation</span><span class="badge-dot" aria-hidden="true"></span></p>
-      <h2 class="section-title" data-reveal>Hexagonal tiles from<br><em class="accent">shells.</em></h2>
+      <p class="section-label" data-reveal><span data-i18n="nest-flooring-label">The ground</span><span class="badge-dash" aria-hidden="true"></span><span data-i18n="nest-flooring-badge">Nest foundation</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <h2 class="section-title" data-reveal data-i18n="nest-flooring-title">Hexagonal tiles from<br><em class="accent">shells.</em></h2>
       <div data-reveal>
-        <h3>Eggshell + Mussel Composite</h3>
-        <p>Ground mussel shells and calcium-rich eggshells cast into hexagonal tiles. This modular flooring system creates flexible seating zones without requiring adhesives or mechanical fasteners.</p>
-        <p>After the festival, all tiles return to composting. The hexagonal geometry echoes natural tessellations found in honeycombs and flower petals — biomimetic design as foundational principle.</p>
+        <h3 data-i18n="nest-flooring-h3">Eggshell + Mussel Composite</h3>
+        <p data-i18n="nest-flooring-body1">Ground mussel shells and calcium-rich eggshells cast into hexagonal tiles. This modular flooring system creates flexible seating zones without requiring adhesives or mechanical fasteners.</p>
+        <p data-i18n="nest-flooring-body2">After the festival, all tiles return to composting. The hexagonal geometry echoes natural tessellations found in honeycombs and flower petals — biomimetic design as foundational principle.</p>
         <span class="material-tag">
           <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/></svg>
-          Eggshell + Mussel · Green Cycle Material
+          <span data-i18n="nest-flooring-tag">Eggshell + Mussel · Green Cycle Material</span>
         </span>
       </div>
     </div>
@@ -249,10 +261,10 @@
           <circle cx="32" cy="32" r="12" stroke="currentColor" stroke-width="1.5" fill="rgba(255,255,255,0.08)"/>
           <circle cx="32" cy="32" r="6" fill="currentColor" opacity="0.4"/>
         </svg>
-        <p class="concept-name">Breath — Option 02</p>
+        <p class="concept-name" data-i18n="concept-breath-name">Breath — Option 02</p>
       </div>
-      <h2 class="section-title" data-reveal>A lattice that<br>opens with the <em class="accent">sun.</em></h2>
-      <p class="intro-body" data-reveal>A scaffold grid wrapped in translucent panels of varying density and opacity. Darker, denser panels face the strongest sun for shading; lighter, transparent panels let daylight through — a facade that breathes in response to solar exposure.</p>
+      <h2 class="section-title" data-reveal data-i18n="concept-breath-title">A lattice that<br>opens with the <em class="accent">sun.</em></h2>
+      <p class="intro-body" data-reveal data-i18n="concept-breath-body">A scaffold grid wrapped in translucent panels of varying density and opacity. Darker, denser panels face the strongest sun for shading; lighter, transparent panels let daylight through — a facade that breathes in response to solar exposure.</p>
     </div>
   </section>
 
@@ -273,17 +285,17 @@
           </svg>
         </div>
       </div>
-      <span class="compare-label compare-label--left">Day</span>
-      <span class="compare-label compare-label--right">Night</span>
+      <span class="compare-label compare-label--left" data-i18n="compare-day">Day</span>
+      <span class="compare-label compare-label--right" data-i18n="compare-night">Night</span>
     </div>
   </section>
 
   <!-- BREATH: Solar diagram -->
   <section class="sec sec--dark colour-intro">
     <div class="container container--narrow">
-      <p class="section-label" data-reveal><span>Adaptive facade</span><span class="badge-dash" aria-hidden="true"></span><span>Breath · Solar logic</span><span class="badge-dot" aria-hidden="true"></span></p>
-      <h2 class="section-title" data-reveal>Panels tuned<br>to <em class="accent">sunlight.</em></h2>
-      <p class="intro-body" data-reveal>Darker, opaque panels are placed where solar exposure is highest, providing maximum shading. Lighter, transparent panels are placed where less shading is needed, letting more light through.</p>
+      <p class="section-label" data-reveal><span data-i18n="breath-diagram-label">Adaptive facade</span><span class="badge-dash" aria-hidden="true"></span><span data-i18n="breath-diagram-badge">Breath · Solar logic</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <h2 class="section-title" data-reveal data-i18n="breath-diagram-title">Panels tuned<br>to <em class="accent">sunlight.</em></h2>
+      <p class="intro-body" data-reveal data-i18n="breath-diagram-body">Darker, opaque panels are placed where solar exposure is highest, providing maximum shading. Lighter, transparent panels are placed where less shading is needed, letting more light through.</p>
     </div>
   </section>
   <section class="render">
@@ -315,10 +327,10 @@
           <circle cx="32" cy="32" r="6" fill="currentColor" opacity="0.3"/>
           <path d="M24 42 L40 42" stroke="currentColor" stroke-width="1" opacity="0.5"/>
         </svg>
-        <p class="concept-name">Stillness — Option 03</p>
+        <p class="concept-name" data-i18n="concept-stillness-name">Stillness — Option 03</p>
       </div>
-      <h2 class="section-title" data-reveal>Low-sensory intimate<br><em class="accent">refuge.</em></h2>
-      <p class="intro-body" data-reveal>A pavilion canopy of hanging translucent bioplastic spheres, filtering the festival into a soft haze of colour. Below, organic pebble-shaped seating and gauzy curtains create a sensory escape from festival intensity — a quiet pod within noise.</p>
+      <h2 class="section-title" data-reveal data-i18n="concept-stillness-title">Low-sensory intimate<br><em class="accent">refuge.</em></h2>
+      <p class="intro-body" data-reveal data-i18n="concept-stillness-body">A pavilion canopy of hanging translucent bioplastic spheres, filtering the festival into a soft haze of colour. Below, organic pebble-shaped seating and gauzy curtains create a sensory escape from festival intensity — a quiet pod within noise.</p>
     </div>
   </section>
 
@@ -339,17 +351,17 @@
           </svg>
         </div>
       </div>
-      <span class="compare-label compare-label--left">Day</span>
-      <span class="compare-label compare-label--right">Night</span>
+      <span class="compare-label compare-label--left" data-i18n="compare-day">Day</span>
+      <span class="compare-label compare-label--right" data-i18n="compare-night">Night</span>
     </div>
   </section>
 
   <!-- STILLNESS: Colour proposal slider -->
   <section class="sec sec--dark colour-intro">
     <div class="container container--narrow">
-      <p class="section-label" data-reveal><span>Colour proposals</span><span class="badge-dash" aria-hidden="true"></span><span>Stillness · Canopy</span><span class="badge-dot" aria-hidden="true"></span></p>
-      <h2 class="section-title" data-reveal>Soft pastel or<br><em class="accent">blue &amp; yellow?</em></h2>
-      <p class="intro-body" data-reveal>The hanging bioplastic sphere canopy can be cast in two palettes: a soft multicolour pastel haze, or a bold blue-to-yellow gradient echoing sky and sun. Drag to compare.</p>
+      <p class="section-label" data-reveal><span data-i18n="colour-proposals-label">Colour proposals</span><span class="badge-dash" aria-hidden="true"></span><span data-i18n="stillness-colour-badge">Stillness · Canopy</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <h2 class="section-title" data-reveal data-i18n="stillness-colour-title">Soft pastel or<br><em class="accent">blue &amp; yellow?</em></h2>
+      <p class="intro-body" data-reveal data-i18n="stillness-colour-body">The hanging bioplastic sphere canopy can be cast in two palettes: a soft multicolour pastel haze, or a bold blue-to-yellow gradient echoing sky and sun. Drag to compare.</p>
     </div>
   </section>
   <section class="render compare-section">
@@ -368,8 +380,8 @@
           </svg>
         </div>
       </div>
-      <span class="compare-label compare-label--left">Pastel</span>
-      <span class="compare-label compare-label--right">Blue &amp; Yellow</span>
+      <span class="compare-label compare-label--left" data-i18n="compare-pastel">Pastel</span>
+      <span class="compare-label compare-label--right" data-i18n="compare-blueyellow">Blue &amp; Yellow</span>
     </div>
   </section>
 
@@ -393,9 +405,9 @@
   <!-- BIOMATERIALS -->
   <section class="sec sec--dark" id="s-materials">
     <div class="container">
-      <p class="section-label" data-reveal><span>Biomaterials</span><span class="badge-dash" aria-hidden="true"></span><span>03</span><span class="badge-dot" aria-hidden="true"></span></p>
-      <h2 class="section-title" data-reveal>Six materials,<br>one <em class="accent">circular</em> system.</h2>
-      <p class="intro-body" data-reveal>Six substances normally associated with waste or biology, transformed into surfaces of encounter and environmental storytelling.</p>
+      <p class="section-label" data-reveal><span data-i18n="materials-label">Biomaterials</span><span class="badge-dash" aria-hidden="true"></span><span>03</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <h2 class="section-title" data-reveal data-i18n="materials-title">Six materials,<br>one <em class="accent">circular</em> system.</h2>
+      <p class="intro-body" data-reveal data-i18n="materials-body">Six substances normally associated with waste or biology, transformed into surfaces of encounter and environmental storytelling.</p>
       <div class="cards-6">
         <div class="card card--dark" data-reveal>
           <div class="card-photo">
@@ -403,10 +415,10 @@
           </div>
           <div class="card-content">
             <h3>Kombucha</h3>
-            <p>Grown from fermented tea cultures into flexible, leather-like biofilm sheets.</p>
+            <p data-i18n="mat-kombucha-body">Grown from fermented tea cultures into flexible, leather-like biofilm sheets.</p>
             <span class="material-tag">
               <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/></svg>
-              Bacterial Cellulose
+              <span data-i18n="mat-kombucha-tag">Bacterial Cellulose</span>
             </span>
           </div>
         </div>
@@ -415,11 +427,11 @@
             <img src="images/material-coffee-grounds.jpg" alt="Coffee grounds sample">
           </div>
           <div class="card-content">
-            <h3>Coffee Grounds</h3>
-            <p>Dense, dark, tactile tiles that carry the memory of every Barcelona morning.</p>
+            <h3 data-i18n="mat-coffee-title">Coffee Grounds</h3>
+            <p data-i18n="mat-coffee-body">Dense, dark, tactile tiles that carry the memory of every Barcelona morning.</p>
             <span class="material-tag">
               <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/></svg>
-              Lignin &amp; Cellulose
+              <span data-i18n="mat-coffee-tag">Lignin &amp; Cellulose</span>
             </span>
           </div>
         </div>
@@ -428,11 +440,11 @@
             <img src="images/material-mycelium.jpg" alt="Mycelium sample">
           </div>
           <div class="card-content">
-            <h3>Mycelium</h3>
-            <p>Mushroom root networks grown into lightweight, insulating structural forms.</p>
+            <h3 data-i18n="mat-mycelium-title">Mycelium</h3>
+            <p data-i18n="mat-mycelium-body">Mushroom root networks grown into lightweight, insulating structural forms.</p>
             <span class="material-tag">
               <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/></svg>
-              Chitin (Polysaccharide)
+              <span data-i18n="mat-mycelium-tag">Chitin (Polysaccharide)</span>
             </span>
           </div>
         </div>
@@ -441,11 +453,11 @@
             <img src="images/material-chitosan.jpg" alt="Chitosan sample">
           </div>
           <div class="card-content">
-            <h3>Chitosan</h3>
-            <p>Derived from crustacean shells, cast into rigid, biodegradable composite panels.</p>
+            <h3 data-i18n="mat-chitosan-title">Chitosan</h3>
+            <p data-i18n="mat-chitosan-body">Derived from crustacean shells, cast into rigid, biodegradable composite panels.</p>
             <span class="material-tag">
               <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/></svg>
-              Deacetylated Chitin
+              <span data-i18n="mat-chitosan-tag">Deacetylated Chitin</span>
             </span>
           </div>
         </div>
@@ -454,11 +466,11 @@
             <img src="images/material-gelatin.jpg" alt="Gelatin sample">
           </div>
           <div class="card-content">
-            <h3>Gelatin</h3>
-            <p>Cast into translucent, jewel-like forms that catch and hold coloured light.</p>
+            <h3 data-i18n="mat-gelatin-title">Gelatin</h3>
+            <p data-i18n="mat-gelatin-body">Cast into translucent, jewel-like forms that catch and hold coloured light.</p>
             <span class="material-tag">
               <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/></svg>
-              Collagen (Protein)
+              <span data-i18n="mat-gelatin-tag">Collagen (Protein)</span>
             </span>
           </div>
         </div>
@@ -467,11 +479,11 @@
             <img src="images/material-mussel-shells.jpg" alt="Mussel shells sample">
           </div>
           <div class="card-content">
-            <h3>Mussel Shells</h3>
-            <p>Ground and cast into hexagonal tiles that filter light and create acoustic texture.</p>
+            <h3 data-i18n="mat-mussel-title">Mussel Shells</h3>
+            <p data-i18n="mat-mussel-body">Ground and cast into hexagonal tiles that filter light and create acoustic texture.</p>
             <span class="material-tag">
               <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/></svg>
-              Calcium Carbonate
+              <span data-i18n="mat-mussel-tag">Calcium Carbonate</span>
             </span>
           </div>
         </div>
@@ -482,9 +494,9 @@
   <!-- ART SECTION (before Cycles) -->
   <section class="sec sec--dark art-section" id="s-art">
     <div class="container container--narrow">
-      <p class="section-label" data-reveal><span>Inside the pavilion</span><span class="badge-dash" aria-hidden="true"></span><span>Art & Collaboration</span><span class="badge-dot" aria-hidden="true"></span></p>
-      <h2 class="section-title" data-reveal>Space for artistic<br><em class="accent">encounters.</em></h2>
-      <p class="art-lead" data-reveal>To foster engagement and purpose in the project through artistic interventions. To communicate the values of the pavilion and the festival through art, generating an experience of elevation, reflection, and respect for the space and its surroundings.</p>
+      <p class="section-label" data-reveal><span data-i18n="art-label">Inside the pavilion</span><span class="badge-dash" aria-hidden="true"></span><span data-i18n="art-badge">Art &amp; Collaboration</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <h2 class="section-title" data-reveal data-i18n="art-title">Space for artistic<br><em class="accent">encounters.</em></h2>
+      <p class="art-lead" data-reveal data-i18n="art-lead">To foster engagement and purpose in the project through artistic interventions. To communicate the values of the pavilion and the festival through art, generating an experience of elevation, reflection, and respect for the space and its surroundings.</p>
     </div>
   </section>
 
@@ -495,11 +507,11 @@
 
   <section class="sec sec--dark art-section">
     <div class="container container--narrow">
-      <blockquote class="art-quote" data-reveal>"Lo importante no es lo que se ve, sino lo que sucede entre las personas."<br><cite>— Rirkrit Tiravanija</cite></blockquote>
+      <blockquote class="art-quote" data-reveal data-i18n="art-quote">"Lo importante no es lo que se ve, sino lo que sucede entre las personas."<br><cite>— Rirkrit Tiravanija</cite></blockquote>
       <div class="art-body" data-reveal>
-        <p>We understand art as a tool for understanding and reformulating our visual and conceptual language, as well as our relationship with time. Just as Primavera Sound has established itself as one of the most relevant music festivals of our era, we propose inviting artists whose practices reflect this cultural relevance — creating a space where the audience can perceive themselves and relate to one another in a different way, through experience, knowledge, and perception.</p>
-        <p>Through the use of natural materials, the project proposes a radical gesture of extraordinary impact: a place where people can pause, feel, and experience possible futures from the present.</p>
-        <p>A space conceived to breathe deeply and inhabit time from another dimension — a positive act of renewal that invites us to slow down in order to keep going. An experience that opens the possibility of reconnecting with oneself, with others, and with one's surroundings.</p>
+        <p data-i18n="art-body1">We understand art as a tool for understanding and reformulating our visual and conceptual language, as well as our relationship with time. Just as Primavera Sound has established itself as one of the most relevant music festivals of our era, we propose inviting artists whose practices reflect this cultural relevance — creating a space where the audience can perceive themselves and relate to one another in a different way, through experience, knowledge, and perception.</p>
+        <p data-i18n="art-body2">Through the use of natural materials, the project proposes a radical gesture of extraordinary impact: a place where people can pause, feel, and experience possible futures from the present.</p>
+        <p data-i18n="art-body3">A space conceived to breathe deeply and inhabit time from another dimension — a positive act of renewal that invites us to slow down in order to keep going. An experience that opens the possibility of reconnecting with oneself, with others, and with one's surroundings.</p>
       </div>
     </div>
   </section>
@@ -507,8 +519,8 @@
   <!-- CYCLES -->
   <section class="sec sec--light" id="s-cycles">
     <div class="container container--narrow">
-      <p class="section-label" data-reveal><span>Two metabolisms</span><span class="badge-dash" aria-hidden="true"></span><span>04</span><span class="badge-dot" aria-hidden="true"></span></p>
-      <h2 class="section-title" data-reveal>Nothing is designed<br>to be discarded.</h2>
+      <p class="section-label" data-reveal><span data-i18n="cycles-label">Two metabolisms</span><span class="badge-dash" aria-hidden="true"></span><span>04</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <h2 class="section-title" data-reveal data-i18n="cycles-title">Nothing is designed<br>to be discarded.</h2>
     </div>
     <div class="container">
       <div class="cycle-diagrams">
@@ -526,21 +538,21 @@
             <path d="M 195 213 A 85 85 0 0 1 85 213" stroke="#4f7d62" stroke-width="2" marker-end="url(#gc-arr)"/>
             <path d="M 56 163 A 85 85 0 0 1 111 68" stroke="#4f7d62" stroke-width="2" marker-end="url(#gc-arr)"/>
             <circle cx="140" cy="63" r="30" fill="#4f7d62"/>
-            <text x="140" y="59" text-anchor="middle" fill="white" font-size="11.5" font-family="Instrument Sans,sans-serif" font-weight="600">Grow</text>
-            <text x="140" y="72" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Instrument Sans,sans-serif">organic</text>
+            <text x="140" y="59" text-anchor="middle" fill="white" font-size="11.5" font-family="Instrument Sans,sans-serif" font-weight="600" data-i18n="svg-grow">Grow</text>
+            <text x="140" y="72" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Instrument Sans,sans-serif" data-i18n="svg-organic">organic</text>
             <circle cx="214" cy="191" r="30" fill="#4f7d62"/>
-            <text x="214" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Instrument Sans,sans-serif" font-weight="600">Decay</text>
-            <text x="214" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Instrument Sans,sans-serif">compost</text>
+            <text x="214" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Instrument Sans,sans-serif" font-weight="600" data-i18n="svg-decay">Decay</text>
+            <text x="214" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Instrument Sans,sans-serif" data-i18n="svg-compost">compost</text>
             <circle cx="66" cy="191" r="30" fill="#4f7d62"/>
-            <text x="66" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Instrument Sans,sans-serif" font-weight="600">Regrow</text>
-            <text x="66" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Instrument Sans,sans-serif">nature</text>
-            <text x="140" y="141" text-anchor="middle" fill="#4f7d62" font-size="11" font-family="Instrument Sans,sans-serif" font-weight="600">Green</text>
-            <text x="140" y="157" text-anchor="middle" fill="#4f7d62" font-size="11" font-family="Instrument Sans,sans-serif" font-weight="600">Cycle</text>
+            <text x="66" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Instrument Sans,sans-serif" font-weight="600" data-i18n="svg-regrow">Regrow</text>
+            <text x="66" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Instrument Sans,sans-serif" data-i18n="svg-nature">nature</text>
+            <text x="140" y="141" text-anchor="middle" fill="#4f7d62" font-size="11" font-family="Instrument Sans,sans-serif" font-weight="600" data-i18n="svg-green">Green</text>
+            <text x="140" y="157" text-anchor="middle" fill="#4f7d62" font-size="11" font-family="Instrument Sans,sans-serif" font-weight="600" data-i18n="svg-cycle-a">Cycle</text>
           </svg>
           <div class="cycle-meta">
-            <span class="cycle-tag" style="color:#4f7d62">Green Cycle</span>
-            <h3>Organic matter returns to earth.</h3>
-            <p>Biomaterials designed to degrade with dignity and re-enter the biological cycle. What protects today can nourish tomorrow.</p>
+            <span class="cycle-tag" style="color:#4f7d62" data-i18n="cycle-green-tag">Green Cycle</span>
+            <h3 data-i18n="cycle-green-title">Organic matter returns to earth.</h3>
+            <p data-i18n="cycle-green-body">Biomaterials designed to degrade with dignity and re-enter the biological cycle. What protects today can nourish tomorrow.</p>
           </div>
         </div>
 
@@ -557,21 +569,21 @@
             <path d="M 195 213 A 85 85 0 0 1 85 213" stroke="#46696a" stroke-width="2" marker-end="url(#bc-arr)"/>
             <path d="M 56 163 A 85 85 0 0 1 111 68" stroke="#46696a" stroke-width="2" marker-end="url(#bc-arr)"/>
             <circle cx="140" cy="63" r="30" fill="#46696a"/>
-            <text x="140" y="59" text-anchor="middle" fill="white" font-size="11.5" font-family="Instrument Sans,sans-serif" font-weight="600">Build</text>
-            <text x="140" y="72" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Instrument Sans,sans-serif">structure</text>
+            <text x="140" y="59" text-anchor="middle" fill="white" font-size="11.5" font-family="Instrument Sans,sans-serif" font-weight="600" data-i18n="svg-build">Build</text>
+            <text x="140" y="72" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Instrument Sans,sans-serif" data-i18n="svg-structure">structure</text>
             <circle cx="214" cy="191" r="30" fill="#46696a"/>
-            <text x="214" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Instrument Sans,sans-serif" font-weight="600">Unbuild</text>
-            <text x="214" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Instrument Sans,sans-serif">dismantle</text>
+            <text x="214" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Instrument Sans,sans-serif" font-weight="600" data-i18n="svg-unbuild">Unbuild</text>
+            <text x="214" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Instrument Sans,sans-serif" data-i18n="svg-dismantle">dismantle</text>
             <circle cx="66" cy="191" r="30" fill="#46696a"/>
-            <text x="66" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Instrument Sans,sans-serif" font-weight="600">Reuse</text>
-            <text x="66" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Instrument Sans,sans-serif">new life</text>
-            <text x="140" y="141" text-anchor="middle" fill="#46696a" font-size="11" font-family="Instrument Sans,sans-serif" font-weight="600">Blue</text>
-            <text x="140" y="157" text-anchor="middle" fill="#46696a" font-size="11" font-family="Instrument Sans,sans-serif" font-weight="600">Cycle</text>
+            <text x="66" y="187" text-anchor="middle" fill="white" font-size="11.5" font-family="Instrument Sans,sans-serif" font-weight="600" data-i18n="svg-reuse">Reuse</text>
+            <text x="66" y="200" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-size="8.5" font-family="Instrument Sans,sans-serif" data-i18n="svg-newlife">new life</text>
+            <text x="140" y="141" text-anchor="middle" fill="#46696a" font-size="11" font-family="Instrument Sans,sans-serif" font-weight="600" data-i18n="svg-blue">Blue</text>
+            <text x="140" y="157" text-anchor="middle" fill="#46696a" font-size="11" font-family="Instrument Sans,sans-serif" font-weight="600" data-i18n="svg-cycle-b">Cycle</text>
           </svg>
           <div class="cycle-meta">
-            <span class="cycle-tag" style="color:#46696a">Blue Cycle</span>
-            <h3>Every element retains value.</h3>
-            <p>The structure is modular, demountable, and traceable. Each element can live multiple lives in the technosphere.</p>
+            <span class="cycle-tag" style="color:#46696a" data-i18n="cycle-blue-tag">Blue Cycle</span>
+            <h3 data-i18n="cycle-blue-title">Every element retains value.</h3>
+            <p data-i18n="cycle-blue-body">The structure is modular, demountable, and traceable. Each element can live multiple lives in the technosphere.</p>
           </div>
         </div>
 
@@ -582,11 +594,11 @@
   <!-- EXPERIENCE -->
   <section class="sec sec--dark">
     <div class="container container--narrow">
-      <p class="section-label" data-reveal><span>Inside the festival</span><span class="badge-dash" aria-hidden="true"></span><span>05</span><span class="badge-dot" aria-hidden="true"></span></p>
-      <h2 class="section-title" data-reveal>Rest inside change.</h2>
+      <p class="section-label" data-reveal><span data-i18n="experience-label">Inside the festival</span><span class="badge-dash" aria-hidden="true"></span><span>05</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <h2 class="section-title" data-reveal data-i18n="experience-title">Rest inside change.</h2>
       <div class="body-cols" data-reveal>
-        <p>A climate refuge and sensory shelter within the intensity of Primavera Sound. Through filtered light, tactile biomaterials, and spaces for play and contemplation.</p>
-        <p>Comfort understood as something collective, emotional, and ecological. A slow rhythm inside the accelerated environment of the festival.</p>
+        <p data-i18n="experience-body1">A climate refuge and sensory shelter within the intensity of Primavera Sound. Through filtered light, tactile biomaterials, and spaces for play and contemplation.</p>
+        <p data-i18n="experience-body2">Comfort understood as something collective, emotional, and ecological. A slow rhythm inside the accelerated environment of the festival.</p>
       </div>
     </div>
   </section>
@@ -594,46 +606,46 @@
   <!-- MATERIAL LAB -->
   <section class="sec sec--light" id="s-lab">
     <div class="container">
-      <p class="section-label" data-reveal><span>Material research</span><span class="badge-dash" aria-hidden="true"></span><span>06</span><span class="badge-dot" aria-hidden="true"></span></p>
-      <h2 class="section-title" data-reveal>From the kitchen<br>to architecture.</h2>
-      <p class="intro-body" data-reveal>Real samples, real experiments. Every material was tested and documented in the workshop before becoming part of the shelter.</p>
+      <p class="section-label" data-reveal><span data-i18n="lab-label">Material research</span><span class="badge-dash" aria-hidden="true"></span><span>06</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <h2 class="section-title" data-reveal data-i18n="lab-title">From the kitchen<br>to architecture.</h2>
+      <p class="intro-body" data-reveal data-i18n="lab-body">Real samples, real experiments. Every material was tested and documented in the workshop before becoming part of the shelter.</p>
       <div class="lab-filters">
-        <button class="lab-btn active" data-filter="all">All</button>
-        <button class="lab-btn" data-filter="process">Process</button>
-        <button class="lab-btn" data-filter="orange">Orange Peel</button>
-        <button class="lab-btn" data-filter="coffee">Coffee &amp; Eggshell</button>
-        <button class="lab-btn" data-filter="bioplastic">Bioplastics</button>
+        <button class="lab-btn active" data-filter="all" data-i18n="lab-filter-all">All</button>
+        <button class="lab-btn" data-filter="process" data-i18n="lab-filter-process">Process</button>
+        <button class="lab-btn" data-filter="orange" data-i18n="lab-filter-orange">Orange Peel</button>
+        <button class="lab-btn" data-filter="coffee" data-i18n="lab-filter-coffee">Coffee &amp; Eggshell</button>
+        <button class="lab-btn" data-filter="bioplastic" data-i18n="lab-filter-bioplastic">Bioplastics</button>
       </div>
       <div class="lab-grid">
-        <div class="lab-item" data-cat="orange"><img src="images/ufgc_p19_img1.jpeg" alt="Orange peel scale skin"><div class="lab-cap"><p>Orange peel scale skin — overlapping tessellation</p></div></div>
-        <div class="lab-item" data-cat="orange"><img src="images/ufgc_p19_img2.jpeg" alt="Orange peel woven mat"><div class="lab-cap"><p>Orange peel — modular woven mat</p></div></div>
-        <div class="lab-item" data-cat="process"><img src="images/ufgc_p21_img1.jpeg" alt="Graphic Lab workshop"><div class="lab-cap"><p>Graphic Lab — bioplastics workshop</p></div></div>
-        <div class="lab-item" data-cat="process"><img src="images/ufgc_p20_img1.jpeg" alt="Documentation card"><div class="lab-cap"><p>Ficha de Documentación — material test card</p></div></div>
-        <div class="lab-item" data-cat="process"><img src="images/ufgc_p20_img2.jpeg" alt="Workshop recipes"><div class="lab-cap"><p>Workshop — bioplastics recipes</p></div></div>
-        <div class="lab-item" data-cat="process"><img src="images/ufgc_p21_img2.jpeg" alt="Mold prototypes"><div class="lab-cap"><p>Hexagonal mold prototypes</p></div></div>
-        <div class="lab-item" data-cat="coffee"><img src="images/ufgc_p20_img3.jpeg" alt="Coffee gelatine tile"><div class="lab-cap"><p>Café húmedo + Gelatina — Experimento G26</p></div></div>
-        <div class="lab-item" data-cat="coffee"><img src="images/ufgc_p22_img1.jpeg" alt="Eggshell tiles"><div class="lab-cap"><p>Eggshell + mussel composite — hexagonal tiles</p></div></div>
-        <div class="lab-item" data-cat="coffee"><img src="images/ufgc_p22_img2.jpeg" alt="Tile texture"><div class="lab-cap"><p>Composite tile — granular texture detail</p></div></div>
-        <div class="lab-item" data-cat="coffee"><img src="images/ufgc_p22_img3.jpeg" alt="Tile variation"><div class="lab-cap"><p>Composite tile — colour variation</p></div></div>
-        <div class="lab-item" data-cat="coffee"><img src="images/ufgc_p23_img2.jpeg" alt="Coffee sample"><div class="lab-cap"><p>Coffee + eggshell sample</p></div></div>
-        <div class="lab-item" data-cat="coffee"><img src="images/ufgc_p23_img3.jpeg" alt="Coffee surface test"><div class="lab-cap"><p>Coffee + eggshell surface test</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p23_img1.jpeg" alt="Bio materials token"><div class="lab-cap"><p>"Made entirely out of bio materials"</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p24_img1.jpeg" alt="Structural test forms"><div class="lab-cap"><p>Bioplastic structural test forms</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p24_img2.jpeg" alt="Form variant"><div class="lab-cap"><p>Bioplastic form — structural test variant</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p24_img3.jpeg" alt="Form close-up"><div class="lab-cap"><p>Bioplastic — surface texture close-up</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p25_img1.jpeg" alt="Orange lattice"><div class="lab-cap"><p>Bioplástico naranja — perforated lattice panel</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p25_img2.jpeg" alt="Orange translucency"><div class="lab-cap"><p>Bioplástico naranja — translucency test</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p25_img3.jpeg" alt="Orange flex"><div class="lab-cap"><p>Bioplástico naranja — flexibility test</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p26_img1.jpeg" alt="Teal membrane"><div class="lab-cap"><p>Bioplástico azul — cellular network membrane</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p26_img2.jpeg" alt="Teal cell detail"><div class="lab-cap"><p>Bioplástico azul — cell structure detail</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p26_img3.jpeg" alt="Teal light test"><div class="lab-cap"><p>Bioplástico azul — light transmission test</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p27_img1.jpeg" alt="Yellow pendants"><div class="lab-cap"><p>Bioplástico amarillo — hanging leaf pendants</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p27_img2.jpeg" alt="Pendant detail"><div class="lab-cap"><p>Bioplástico amarillo — pendant detail</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p28_img1.jpeg" alt="Green disc"><div class="lab-cap"><p>Bioplástico verde — cúrcuma + azul índigo</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p28_img2.jpeg" alt="Green variant"><div class="lab-cap"><p>Bioplástico verde — pigment variation</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p28_img3.jpeg" alt="Green surface"><div class="lab-cap"><p>Bioplástico verde — surface test</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p29_img1.jpeg" alt="Red slab"><div class="lab-cap"><p>Bioplástico rojo — flexible translucent slab</p></div></div>
-        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p29_img2.jpeg" alt="Red detail"><div class="lab-cap"><p>Bioplástico rojo — colour &amp; flex detail</p></div></div>
+        <div class="lab-item" data-cat="orange"><img src="images/ufgc_p19_img1.jpeg" alt="Orange peel scale skin"><div class="lab-cap"><p data-i18n="lab-cap-1">Orange peel scale skin — overlapping tessellation</p></div></div>
+        <div class="lab-item" data-cat="orange"><img src="images/ufgc_p19_img2.jpeg" alt="Orange peel woven mat"><div class="lab-cap"><p data-i18n="lab-cap-2">Orange peel — modular woven mat</p></div></div>
+        <div class="lab-item" data-cat="process"><img src="images/ufgc_p21_img1.jpeg" alt="Graphic Lab workshop"><div class="lab-cap"><p data-i18n="lab-cap-3">Graphic Lab — bioplastics workshop</p></div></div>
+        <div class="lab-item" data-cat="process"><img src="images/ufgc_p20_img1.jpeg" alt="Documentation card"><div class="lab-cap"><p data-i18n="lab-cap-4">Documentation Card — material test card</p></div></div>
+        <div class="lab-item" data-cat="process"><img src="images/ufgc_p20_img2.jpeg" alt="Workshop recipes"><div class="lab-cap"><p data-i18n="lab-cap-5">Workshop — bioplastics recipes</p></div></div>
+        <div class="lab-item" data-cat="process"><img src="images/ufgc_p21_img2.jpeg" alt="Mold prototypes"><div class="lab-cap"><p data-i18n="lab-cap-6">Hexagonal mold prototypes</p></div></div>
+        <div class="lab-item" data-cat="coffee"><img src="images/ufgc_p20_img3.jpeg" alt="Coffee gelatine tile"><div class="lab-cap"><p data-i18n="lab-cap-7">Wet Coffee + Gelatine — Experiment G26</p></div></div>
+        <div class="lab-item" data-cat="coffee"><img src="images/ufgc_p22_img1.jpeg" alt="Eggshell tiles"><div class="lab-cap"><p data-i18n="lab-cap-8">Eggshell + mussel composite — hexagonal tiles</p></div></div>
+        <div class="lab-item" data-cat="coffee"><img src="images/ufgc_p22_img2.jpeg" alt="Tile texture"><div class="lab-cap"><p data-i18n="lab-cap-9">Composite tile — granular texture detail</p></div></div>
+        <div class="lab-item" data-cat="coffee"><img src="images/ufgc_p22_img3.jpeg" alt="Tile variation"><div class="lab-cap"><p data-i18n="lab-cap-10">Composite tile — colour variation</p></div></div>
+        <div class="lab-item" data-cat="coffee"><img src="images/ufgc_p23_img2.jpeg" alt="Coffee sample"><div class="lab-cap"><p data-i18n="lab-cap-11">Coffee + eggshell sample</p></div></div>
+        <div class="lab-item" data-cat="coffee"><img src="images/ufgc_p23_img3.jpeg" alt="Coffee surface test"><div class="lab-cap"><p data-i18n="lab-cap-12">Coffee + eggshell surface test</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p23_img1.jpeg" alt="Bio materials token"><div class="lab-cap"><p data-i18n="lab-cap-13">"Made entirely out of bio materials"</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p24_img1.jpeg" alt="Structural test forms"><div class="lab-cap"><p data-i18n="lab-cap-14">Bioplastic structural test forms</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p24_img2.jpeg" alt="Form variant"><div class="lab-cap"><p data-i18n="lab-cap-15">Bioplastic form — structural test variant</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p24_img3.jpeg" alt="Form close-up"><div class="lab-cap"><p data-i18n="lab-cap-16">Bioplastic — surface texture close-up</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p25_img1.jpeg" alt="Orange lattice"><div class="lab-cap"><p data-i18n="lab-cap-17">Orange Bioplastic — perforated lattice panel</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p25_img2.jpeg" alt="Orange translucency"><div class="lab-cap"><p data-i18n="lab-cap-18">Orange Bioplastic — translucency test</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p25_img3.jpeg" alt="Orange flex"><div class="lab-cap"><p data-i18n="lab-cap-19">Orange Bioplastic — flexibility test</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p26_img1.jpeg" alt="Teal membrane"><div class="lab-cap"><p data-i18n="lab-cap-20">Blue Bioplastic — cellular network membrane</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p26_img2.jpeg" alt="Teal cell detail"><div class="lab-cap"><p data-i18n="lab-cap-21">Blue Bioplastic — cell structure detail</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p26_img3.jpeg" alt="Teal light test"><div class="lab-cap"><p data-i18n="lab-cap-22">Blue Bioplastic — light transmission test</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p27_img1.jpeg" alt="Yellow pendants"><div class="lab-cap"><p data-i18n="lab-cap-23">Yellow Bioplastic — hanging leaf pendants</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p27_img2.jpeg" alt="Pendant detail"><div class="lab-cap"><p data-i18n="lab-cap-24">Yellow Bioplastic — pendant detail</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p28_img1.jpeg" alt="Green disc"><div class="lab-cap"><p data-i18n="lab-cap-25">Green Bioplastic — turmeric + indigo blue</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p28_img2.jpeg" alt="Green variant"><div class="lab-cap"><p data-i18n="lab-cap-26">Green Bioplastic — pigment variation</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p28_img3.jpeg" alt="Green surface"><div class="lab-cap"><p data-i18n="lab-cap-27">Green Bioplastic — surface test</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p29_img1.jpeg" alt="Red slab"><div class="lab-cap"><p data-i18n="lab-cap-28">Red Bioplastic — flexible translucent slab</p></div></div>
+        <div class="lab-item" data-cat="bioplastic"><img src="images/ufgc_p29_img2.jpeg" alt="Red detail"><div class="lab-cap"><p data-i18n="lab-cap-29">Red Bioplastic — colour &amp; flex detail</p></div></div>
       </div>
     </div>
   </section>
@@ -641,34 +653,34 @@
   <!-- SUSTAINABILITY TABS -->
   <section class="sec sec--dark" id="s-sustainability">
     <div class="container container--narrow">
-      <p class="section-label" data-reveal><span>Sustainability protocol</span><span class="badge-dash" aria-hidden="true"></span><span>07</span><span class="badge-dot" aria-hidden="true"></span></p>
-      <h2 class="section-title" data-reveal>The framework<br>behind the shelter.</h2>
+      <p class="section-label" data-reveal><span data-i18n="protocol-label">Sustainability protocol</span><span class="badge-dash" aria-hidden="true"></span><span>07</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <h2 class="section-title" data-reveal data-i18n="protocol-title">The framework<br>behind the shelter.</h2>
     </div>
     <div class="container">
       <div class="tab-nav" role="tablist">
-        <button class="tab-btn active" data-tab="genesis" role="tab">Genesis &amp; Demise</button>
-        <button class="tab-btn" data-tab="green" role="tab">Green Cycle</button>
-        <button class="tab-btn" data-tab="blue" role="tab">Blue Cycle</button>
-        <button class="tab-btn" data-tab="disassembly" role="tab">Design to Disassemble</button>
-        <button class="tab-btn" data-tab="nutrients" role="tab">No Waste</button>
+        <button class="tab-btn active" data-tab="genesis" role="tab" data-i18n="tab-genesis-btn">Genesis &amp; Demise</button>
+        <button class="tab-btn" data-tab="green" role="tab" data-i18n="tab-green-btn">Green Cycle</button>
+        <button class="tab-btn" data-tab="blue" role="tab" data-i18n="tab-blue-btn">Blue Cycle</button>
+        <button class="tab-btn" data-tab="disassembly" role="tab" data-i18n="tab-disassembly-btn">Design to Disassemble</button>
+        <button class="tab-btn" data-tab="nutrients" role="tab" data-i18n="tab-nutrients-btn">No Waste</button>
       </div>
 
       <div class="tab-panel active" id="tab-genesis">
         <div class="tab-grid">
           <div class="tab-left">
-            <h3>The Ethics of Impermanence</h3>
-            <p>Architecture is a process, not a product. Nature teaches us that everything in an ecosystem has a certain duration — and that the exchange of energy and matter with the environment is crucial for its development.</p>
-            <p>Inspired by the Japanese Metabolism movement of the 1950–60s, this project questions time, not only space.</p>
-            <blockquote>"Yes, perfect as a constant process of change. The impermanent beauty, the immaterial beauty."<cite>— Kisho Kurokawa</cite></blockquote>
+            <h3 data-i18n="tab-genesis-h3">The Ethics of Impermanence</h3>
+            <p data-i18n="tab-genesis-p1">Architecture is a process, not a product. Nature teaches us that everything in an ecosystem has a certain duration — and that the exchange of energy and matter with the environment is crucial for its development.</p>
+            <p data-i18n="tab-genesis-p2">Inspired by the Japanese Metabolism movement of the 1950–60s, this project questions time, not only space.</p>
+            <blockquote data-i18n="tab-genesis-quote">"Yes, perfect as a constant process of change. The impermanent beauty, the immaterial beauty."<cite>— Kisho Kurokawa</cite></blockquote>
           </div>
           <div class="tab-right">
-            <p class="facts-label">Material Lifespan</p>
+            <p class="facts-label" data-i18n="tab-genesis-facts-label">Material Lifespan</p>
             <ul class="facts-list">
-              <li><span>Appliances</span><span>5–10 years</span></li>
-              <li><span>Interior design</span><span>5–20 years</span></li>
-              <li><span>Services / MEP</span><span>5–30 years</span></li>
-              <li><span>Skin / envelope</span><span>30–60 years</span></li>
-              <li><span>Structure</span><span>60–600 years</span></li>
+              <li><span data-i18n="fact-appliances">Appliances</span><span data-i18n="fact-appliances-yrs">5–10 years</span></li>
+              <li><span data-i18n="fact-interior">Interior design</span><span data-i18n="fact-interior-yrs">5–20 years</span></li>
+              <li><span data-i18n="fact-services">Services / MEP</span><span data-i18n="fact-services-yrs">5–30 years</span></li>
+              <li><span data-i18n="fact-skin">Skin / envelope</span><span data-i18n="fact-skin-yrs">30–60 years</span></li>
+              <li><span data-i18n="fact-structure">Structure</span><span data-i18n="fact-structure-yrs">60–600 years</span></li>
             </ul>
           </div>
         </div>
@@ -677,17 +689,17 @@
       <div class="tab-panel" id="tab-green">
         <div class="tab-grid">
           <div class="tab-left">
-            <h3>Biosphere Nutrients</h3>
-            <p>The Green Cycle allows organic matter to return safely to the earth through composting and natural degradation. Materials in this cycle are designed to re-enter nature without contaminating it.</p>
-            <p>The shelter's biomaterial skins — mussel shells, eggshells, coffee grounds, orange peels — are all Green Cycle materials.</p>
+            <h3 data-i18n="tab-green-h3">Biosphere Nutrients</h3>
+            <p data-i18n="tab-green-p1">The Green Cycle allows organic matter to return safely to the earth through composting and natural degradation. Materials in this cycle are designed to re-enter nature without contaminating it.</p>
+            <p data-i18n="tab-green-p2">The shelter's biomaterial skins — mussel shells, eggshells, coffee grounds, orange peels — are all Green Cycle materials.</p>
           </div>
           <div class="tab-right">
-            <p class="facts-label">Material Types</p>
+            <p class="facts-label" data-i18n="tab-green-facts-label">Material Types</p>
             <ul class="facts-types">
-              <li><strong>Biodegradable</strong><span>Returns 100% naturally to the organic cycle through biological activity.</span></li>
-              <li><strong>Bioregenerative</strong><span>Self-sustaining and balanced. Each element sustains and is sustained by the others.</span></li>
-              <li><strong>Bio-enhancer</strong><span>Material that re-enters nature and simultaneously improves its environment.</span></li>
-              <li><strong>Biocompostable</strong><span>Must disintegrate 100% within two months of entering the composting process.</span></li>
+              <li><strong data-i18n="green-type-1-t">Biodegradable</strong><span data-i18n="green-type-1-d">Returns 100% naturally to the organic cycle through biological activity.</span></li>
+              <li><strong data-i18n="green-type-2-t">Bioregenerative</strong><span data-i18n="green-type-2-d">Self-sustaining and balanced. Each element sustains and is sustained by the others.</span></li>
+              <li><strong data-i18n="green-type-3-t">Bio-enhancer</strong><span data-i18n="green-type-3-d">Material that re-enters nature and simultaneously improves its environment.</span></li>
+              <li><strong data-i18n="green-type-4-t">Biocompostable</strong><span data-i18n="green-type-4-d">Must disintegrate 100% within two months of entering the composting process.</span></li>
             </ul>
           </div>
         </div>
@@ -696,17 +708,17 @@
       <div class="tab-panel" id="tab-blue">
         <div class="tab-grid">
           <div class="tab-left">
-            <h3>Technosphere Nutrients</h3>
-            <p>The Blue Cycle ensures that structural elements remain modular, traceable, and reusable over time. Technical materials don't die — they circulate indefinitely in the technosphere.</p>
-            <p>Each time a material is reused, its embodied energy is reduced by up to 50%.</p>
+            <h3 data-i18n="tab-blue-h3">Technosphere Nutrients</h3>
+            <p data-i18n="tab-blue-p1">The Blue Cycle ensures that structural elements remain modular, traceable, and reusable over time. Technical materials don't die — they circulate indefinitely in the technosphere.</p>
+            <p data-i18n="tab-blue-p2">Each time a material is reused, its embodied energy is reduced by up to 50%.</p>
           </div>
           <div class="tab-right">
-            <p class="facts-label">Strategies</p>
+            <p class="facts-label" data-i18n="tab-blue-facts-label">Strategies</p>
             <ul class="facts-types">
-              <li><strong>Primary Reuse</strong><span>Product reused in its original form and purpose.</span></li>
-              <li><strong>Secondary Reuse</strong><span>Reuse with a different purpose. Requires minimal modification.</span></li>
-              <li><strong>Upcycling</strong><span>Transforms waste into something of equal or greater value.</span></li>
-              <li><strong>No Downcycling</strong><span>Avoid processes that reduce material quality — design for reuse from the start.</span></li>
+              <li><strong data-i18n="blue-type-1-t">Primary Reuse</strong><span data-i18n="blue-type-1-d">Product reused in its original form and purpose.</span></li>
+              <li><strong data-i18n="blue-type-2-t">Secondary Reuse</strong><span data-i18n="blue-type-2-d">Reuse with a different purpose. Requires minimal modification.</span></li>
+              <li><strong data-i18n="blue-type-3-t">Upcycling</strong><span data-i18n="blue-type-3-d">Transforms waste into something of equal or greater value.</span></li>
+              <li><strong data-i18n="blue-type-4-t">No Downcycling</strong><span data-i18n="blue-type-4-d">Avoid processes that reduce material quality — design for reuse from the start.</span></li>
             </ul>
           </div>
         </div>
@@ -716,42 +728,42 @@
         <div class="cards-4">
           <div class="card card--light" data-reveal>
             <span class="card-num card-num--dark">01</span>
-            <h3>Method</h3>
+            <h3 data-i18n="disassembly-1-title">Method</h3>
             <ul class="card-list">
-              <li>Document the deconstruction process</li>
-              <li>List all materials and connections</li>
-              <li>Design an accessible disassembly strategy</li>
-              <li>Define the future reuse of each component</li>
+              <li data-i18n="disassembly-1-item1">Document the deconstruction process</li>
+              <li data-i18n="disassembly-1-item2">List all materials and connections</li>
+              <li data-i18n="disassembly-1-item3">Design an accessible disassembly strategy</li>
+              <li data-i18n="disassembly-1-item4">Define the future reuse of each component</li>
             </ul>
           </div>
           <div class="card card--light" data-reveal>
             <span class="card-num card-num--dark">02</span>
-            <h3>Materials</h3>
+            <h3 data-i18n="disassembly-2-title">Materials</h3>
             <ul class="card-list">
-              <li>Select by environmental impact</li>
-              <li>Abolish composite / hybrid materials</li>
-              <li>Differentiate Green and Blue cycle parts</li>
-              <li>Eliminate toxic or high-carbon materials</li>
+              <li data-i18n="disassembly-2-item1">Select by environmental impact</li>
+              <li data-i18n="disassembly-2-item2">Abolish composite / hybrid materials</li>
+              <li data-i18n="disassembly-2-item3">Differentiate Green and Blue cycle parts</li>
+              <li data-i18n="disassembly-2-item4">Eliminate toxic or high-carbon materials</li>
             </ul>
           </div>
           <div class="card card--light" data-reveal>
             <span class="card-num card-num--dark">03</span>
-            <h3>Connections</h3>
+            <h3 data-i18n="disassembly-3-title">Connections</h3>
             <ul class="card-list">
-              <li>Mechanical joints only</li>
-              <li>No glue, no sealants</li>
-              <li>Accessible connections, minimal tools</li>
-              <li>Standard connectors for future reuse</li>
+              <li data-i18n="disassembly-3-item1">Mechanical joints only</li>
+              <li data-i18n="disassembly-3-item2">No glue, no sealants</li>
+              <li data-i18n="disassembly-3-item3">Accessible connections, minimal tools</li>
+              <li data-i18n="disassembly-3-item4">Standard connectors for future reuse</li>
             </ul>
           </div>
           <div class="card card--light" data-reveal>
             <span class="card-num card-num--dark">04</span>
-            <h3>Standardisation</h3>
+            <h3 data-i18n="disassembly-4-title">Standardisation</h3>
             <ul class="card-list">
-              <li>Build on a grid, use modules</li>
-              <li>Modularity aids workers and reuse</li>
-              <li>Use standard systems and connections</li>
-              <li>Non-standard → natural cycle</li>
+              <li data-i18n="disassembly-4-item1">Build on a grid, use modules</li>
+              <li data-i18n="disassembly-4-item2">Modularity aids workers and reuse</li>
+              <li data-i18n="disassembly-4-item3">Use standard systems and connections</li>
+              <li data-i18n="disassembly-4-item4">Non-standard → natural cycle</li>
             </ul>
           </div>
         </div>
@@ -760,17 +772,17 @@
       <div class="tab-panel" id="tab-nutrients">
         <div class="tab-grid">
           <div class="tab-left">
-            <h3>No Waste, Only Nutrients</h3>
-            <p>Eliminating the concept of waste means designing from the beginning with the understanding that there is no waste — only nutrients. The nutrients themselves determine the design.</p>
-            <blockquote>"Building is a natural function. All constructive activity has as a framework nature."<cite>— Ken Yeang</cite></blockquote>
+            <h3 data-i18n="tab-nutrients-h3">No Waste, Only Nutrients</h3>
+            <p data-i18n="tab-nutrients-p">Eliminating the concept of waste means designing from the beginning with the understanding that there is no waste — only nutrients. The nutrients themselves determine the design.</p>
+            <blockquote data-i18n="tab-nutrients-quote">"Building is a natural function. All constructive activity has as a framework nature."<cite>— Ken Yeang</cite></blockquote>
           </div>
           <div class="tab-right">
-            <p class="facts-label">Two Metabolisms</p>
+            <p class="facts-label" data-i18n="tab-nutrients-facts-label">Two Metabolisms</p>
             <ul class="facts-types">
-              <li><strong>Green Nutrients</strong><span>Air, water, renewables, biosynthetics → return to biosphere</span></li>
-              <li><strong>Blue Nutrients</strong><span>Metals, minerals, lab synthetics → circulate in technosphere</span></li>
-              <li><strong>No Hybrids</strong><span>Composite materials cannot be used in either cycle</span></li>
-              <li><strong>Processes, Not Objects</strong><span>Design is a metabolic process of continuous transformation</span></li>
+              <li><strong data-i18n="nutrients-1-t">Green Nutrients</strong><span data-i18n="nutrients-1-d">Air, water, renewables, biosynthetics → return to biosphere</span></li>
+              <li><strong data-i18n="nutrients-2-t">Blue Nutrients</strong><span data-i18n="nutrients-2-d">Metals, minerals, lab synthetics → circulate in technosphere</span></li>
+              <li><strong data-i18n="nutrients-3-t">No Hybrids</strong><span data-i18n="nutrients-3-d">Composite materials cannot be used in either cycle</span></li>
+              <li><strong data-i18n="nutrients-4-t">Processes, Not Objects</strong><span data-i18n="nutrients-4-d">Design is a metabolic process of continuous transformation</span></li>
             </ul>
           </div>
         </div>
@@ -781,14 +793,14 @@
   <!-- PRINCIPLES -->
   <section class="sec sec--light" id="s-principles">
     <div class="container container--narrow">
-      <p class="section-label" data-reveal><span>What we stand for</span><span class="badge-dash" aria-hidden="true"></span><span>08</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <p class="section-label" data-reveal><span data-i18n="principles-label">What we stand for</span><span class="badge-dash" aria-hidden="true"></span><span>08</span><span class="badge-dot" aria-hidden="true"></span></p>
       <div class="principles">
-        <div class="p-line" data-reveal><span class="p-n">01</span><span>Design cycles, not waste.</span></div>
-        <div class="p-line" data-reveal><span class="p-n">02</span><span>Waste becomes resource.</span></div>
-        <div class="p-line" data-reveal><span class="p-n">03</span><span>Build · Unbuild · Reuse.</span></div>
-        <div class="p-line" data-reveal><span class="p-n">04</span><span>Shells that become shelter.</span></div>
-        <div class="p-line" data-reveal><span class="p-n">05</span><span>Designed to return.</span></div>
-        <div class="p-line" data-reveal><span class="p-n">06</span><span>Not permanent. Regenerative.</span></div>
+        <div class="p-line" data-reveal><span class="p-n">01</span><span data-i18n="principle-1">Design cycles, not waste.</span></div>
+        <div class="p-line" data-reveal><span class="p-n">02</span><span data-i18n="principle-2">Waste becomes resource.</span></div>
+        <div class="p-line" data-reveal><span class="p-n">03</span><span data-i18n="principle-3">Build · Unbuild · Reuse.</span></div>
+        <div class="p-line" data-reveal><span class="p-n">04</span><span data-i18n="principle-4">Shells that become shelter.</span></div>
+        <div class="p-line" data-reveal><span class="p-n">05</span><span data-i18n="principle-5">Designed to return.</span></div>
+        <div class="p-line" data-reveal><span class="p-n">06</span><span data-i18n="principle-6">Not permanent. Regenerative.</span></div>
       </div>
     </div>
   </section>
@@ -800,18 +812,18 @@
       <path d="M50 4v92M10.2 27l79.6 46M89.8 27l-79.6 46" stroke="currentColor" stroke-width="1.5"/>
     </svg>
     <div class="container container--narrow">
-      <p class="section-label" data-reveal><span>A proposal</span><span class="badge-dash" aria-hidden="true"></span><span>Primavera Sound 2027</span><span class="badge-dot" aria-hidden="true"></span></p>
-      <h2 class="pitch-title" data-reveal>A temporary shelter<br>that becomes a <em class="accent">model.</em></h2>
+      <p class="section-label" data-reveal><span data-i18n="pitch-label">A proposal</span><span class="badge-dash" aria-hidden="true"></span><span>Primavera Sound 2027</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <h2 class="pitch-title" data-reveal data-i18n="pitch-title">A temporary shelter<br>that becomes a <em class="accent">model.</em></h2>
       <div class="body-cols" data-reveal>
-        <p>Redefining how urban festivals activate public space with circular materials and collective care. Reducing dependence on fossil-based materials while engaging communities in sustainable practices.</p>
-        <p>A scalable, replicable framework for the future of cultural infrastructure.</p>
+        <p data-i18n="pitch-body1">Redefining how urban festivals activate public space with circular materials and collective care. Reducing dependence on fossil-based materials while engaging communities in sustainable practices.</p>
+        <p data-i18n="pitch-body2">A scalable, replicable framework for the future of cultural infrastructure.</p>
       </div>
       <div class="pitch-tags" data-reveal>
-        <span>Climate Adaptation</span>
-        <span>Circular Economy</span>
-        <span>Biomaterials</span>
-        <span>Collective Art</span>
-        <span>Urban Ecology</span>
+        <span data-i18n="pitch-tag-1">Climate Adaptation</span>
+        <span data-i18n="pitch-tag-2">Circular Economy</span>
+        <span data-i18n="pitch-tag-3">Biomaterials</span>
+        <span data-i18n="pitch-tag-4">Collective Art</span>
+        <span data-i18n="pitch-tag-5">Urban Ecology</span>
       </div>
     </div>
   </section>
@@ -821,7 +833,7 @@
     <div class="container">
       <div class="footer-top">
         <p class="footer-logo">ENCOUNTERS</p>
-        <p class="footer-tagline">A space where ecology matters.<br>Primavera Sound · Barcelona · 3–7 June 2027</p>
+        <p class="footer-tagline" data-i18n="footer-tagline">A space where ecology matters.<br>Primavera Sound · Barcelona · 3–7 June 2027</p>
       </div>
       <div class="footer-logos">
         <img src="images/logo-external-reference.png" alt="External Reference Architects">
@@ -830,25 +842,25 @@
       </div>
       <div class="footer-grid">
         <div class="footer-col">
-          <span class="footer-heading">Project</span>
-          <a href="#s-materials">Biomaterials</a>
-          <a href="#s-cycles">Cycles</a>
-          <a href="#s-lab">Material Lab</a>
+          <span class="footer-heading" data-i18n="footer-heading-project">Project</span>
+          <a href="#s-materials" data-i18n="footer-link-biomaterials">Biomaterials</a>
+          <a href="#s-cycles" data-i18n="footer-link-cycles">Cycles</a>
+          <a href="#s-lab" data-i18n="footer-link-lab">Material Lab</a>
         </div>
         <div class="footer-col">
-          <span class="footer-heading">Protocol</span>
-          <a href="#s-sustainability">Sustainability</a>
-          <a href="#s-principles">Principles</a>
-          <a href="#s-pitch">Pitch 2027</a>
+          <span class="footer-heading" data-i18n="footer-heading-protocol">Protocol</span>
+          <a href="#s-sustainability" data-i18n="footer-link-sustainability">Sustainability</a>
+          <a href="#s-principles" data-i18n="footer-link-principles">Principles</a>
+          <a href="#s-pitch" data-i18n="footer-link-pitch">Pitch 2027</a>
         </div>
         <div class="footer-col">
-          <span class="footer-heading">Contact</span>
+          <span class="footer-heading" data-i18n="footer-heading-contact">Contact</span>
           <a href="mailto:marina@externalreference.com">marina@externalreference.com</a>
         </div>
       </div>
       <div class="footer-bottom">
         <span>External Reference Architects</span>
-        <span>Primavera Sound 2027 Proposal</span>
+        <span data-i18n="footer-bottom-2">Primavera Sound 2027 Proposal</span>
       </div>
     </div>
   </footer>
@@ -859,6 +871,7 @@
     <img id="lightboxImg" src="" alt="">
   </div>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
