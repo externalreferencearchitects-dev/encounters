@@ -96,73 +96,184 @@ em.accent { font-style: italic; color: inherit; }
   transition: opacity .4s;
 }
 .nav-links a:hover { opacity: .7; }
+
+/* ── NAV DROPDOWN (Designs) ─────────── */
+.nav-dropdown { position: relative; }
+.nav-dropdown-trigger { display: flex; align-items: center; }
+.nav-dropdown-trigger::after {
+  content: '';
+  width: 7px; height: 7px;
+  margin-left: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform .3s;
+}
+.nav-dropdown:hover .nav-dropdown-trigger::after { transform: rotate(225deg) translateY(2px); }
+
+.nav-dropdown-panel {
+  position: absolute;
+  top: 100%; left: 50%;
+  transform: translate(-50%, 8px);
+  width: 280px;
+  padding: 10px;
+  margin-top: 14px;
+  background-color: rgba(32, 25, 20, .96);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--line-dk);
+  border-radius: 12px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .3s, transform .3s, visibility .3s;
+}
+.nav-dropdown:hover .nav-dropdown-panel {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+.nav-dropdown-panel a {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: background-color .3s;
+}
+.nav-dropdown-panel a:hover { background-color: rgba(232, 147, 77, .12); opacity: 1; }
+.nav-dropdown-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--orange);
+}
+.nav-dropdown-desc {
+  font-size: 12.5px;
+  font-weight: 300;
+  color: var(--muted-dk);
+  line-height: 1.4;
+}
 .nav-cta { color: var(--cream) !important; }
 
 .hamb { display: none; }
 
 /* ── HERO ───────────────────────────── */
+/* Pastel mesh-gradient hero — teal/blue edges, olive-gold core,
+   pale cream base, grain overlay. Restrained label typography. */
 .hero {
+  --hero-ink:  #1d2724;
+  --hero-line: rgba(29, 39, 36, .7);
   position: relative;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   overflow: hidden;
-  padding: 200px 0 160px;
+  padding: 140px 0 96px;
+  color: var(--hero-ink);
 }
-.hero-bg { position: absolute; inset: 0; z-index: 0; background-color: var(--dark); overflow: hidden; }
-.hero-bg img {
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: center 35%;
-  animation: heroKenBurns 24s ease-in-out infinite alternate;
-  transform-origin: center center;
-  will-change: transform;
-}
+
+/* Mesh gradient: oversized blurred layer so edges stay soft */
+.hero-bg { position: absolute; inset: 0; z-index: 0; background-color: #b8d4d6; overflow: hidden; }
 .hero-bg::before {
   content: '';
-  position: absolute; inset: 0;
-  z-index: 1;
-  background-image: url('../images/gradient-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  mix-blend-mode: soft-light;
-  opacity: .85;
+  position: absolute; inset: -12%;
+  background:
+    linear-gradient(180deg, rgba(30, 50, 52, .35), rgba(30, 50, 52, 0) 30%),
+    radial-gradient(55% 34% at 46% 100%, rgba(252, 248, 200, 1), rgba(252, 248, 200, 0) 72%),
+    radial-gradient(36% 32% at 28% 16%, rgba(32, 54, 52, .85), rgba(32, 54, 52, 0) 70%),
+    radial-gradient(48% 40% at 60% 42%, rgba(139, 134, 64, .9), rgba(139, 134, 64, 0) 72%),
+    radial-gradient(34% 42% at 90% 66%, rgba(148, 197, 200, .8), rgba(148, 197, 200, 0) 70%),
+    radial-gradient(40% 50% at 4% 58%, rgba(88, 148, 160, .9), rgba(88, 148, 160, 0) 72%),
+    linear-gradient(180deg, #7fadb4 0%, #a3cad0 38%, #cfe3dc 68%, #eff3d9 100%);
+  filter: blur(64px) saturate(1.15);
 }
+/* Film grain */
 .hero-bg::after {
   content: '';
   position: absolute; inset: 0;
-  z-index: 2;
-  background-image: linear-gradient(to bottom, rgba(32, 25, 20, .5), var(--dark));
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size: 240px 240px;
+  mix-blend-mode: soft-light;
+  opacity: .55;
 }
-@keyframes heroKenBurns {
-  0%   { transform: scale(1.05) translate3d(0, 0, 0); }
-  100% { transform: scale(1.12) translate3d(0, -2%, 0); }
+/* Top scrim: keeps the white fixed nav legible over the pastel field */
+.hero::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 150px;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(28, 47, 49, .5), rgba(28, 47, 49, 0));
 }
-.hero .container { position: relative; z-index: 2; }
+/* Bottom fade: bridges the pastel hero into the dark intro section */
+.hero::after {
+  content: '';
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 230px;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to bottom,
+    rgba(74, 55, 40, 0) 0%,
+    rgba(74, 55, 40, .05) 42%,
+    rgba(74, 55, 40, .22) 64%,
+    rgba(74, 55, 40, .6) 82%,
+    var(--dark) 100%);
+}
 
+.hero-plate { position: relative; z-index: 2; }
+
+/* Upper band: hairline rule + two-line label (ref: "Undertone 01 / Gradient collection") */
+.hero-label {
+  border-top: 1px solid var(--hero-line);
+  padding-top: 18px;
+  margin-bottom: clamp(90px, 16vh, 170px);
+}
+.hero-kicker {
+  font-size: clamp(16px, 1.5vw, 19px);
+  font-weight: 400;
+  line-height: 1.5;
+}
+.hero-meta {
+  font-size: clamp(16px, 1.5vw, 19px);
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: .78;
+}
+
+/* Base band: wordmark left, dot right, hairline below (ref: "Supply.Family" + dot) */
+.hero-base {
+  display: flex; align-items: center; justify-content: space-between;
+  column-gap: 24px;
+  border-bottom: 1px solid var(--hero-line);
+  padding-bottom: 20px;
+}
 .hero-title {
-  width: 80%;
-  max-width: 100%;
-  color: var(--cream);
-  font-weight: 300;
-  font-size: clamp(50px, 9.5vw, 120px);
-  line-height: .9;
-  margin: 20px 0 28px;
+  font-size: clamp(17px, 1.7vw, 23px);
+  font-weight: 500;
+  letter-spacing: .12em;
+  line-height: 1;
+  color: inherit;
 }
-.hero-sub {
-  color: #fff;
-  font-size: clamp(18px, 2.4vw, 32px);
-  font-weight: 300;
+.hero-dot {
+  width: 9px; height: 9px; flex: 0 0 9px;
+  border-radius: 50%;
+  background-color: currentColor;
 }
+
 .hero-scroll {
   position: absolute;
-  bottom: 40px; left: 50px;
+  bottom: 20px; left: 50%;
+  margin-left: -22px;
   z-index: 2;
-  color: rgba(255, 255, 255, .7);
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(249, 213, 184, .9);
   animation: bob 2.8s ease-in-out infinite;
   transition: color .4s;
 }
-.hero-scroll:hover { color: var(--cream); }
+.hero-scroll:hover { color: #fff; }
 @keyframes bob {
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(6px); }
@@ -730,7 +841,6 @@ em.accent { font-style: italic; color: inherit; }
 /* ── REDUCED MOTION ─────────────────── */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero-bg img { animation: none !important; transform: none !important; }
   .hero-scroll { animation: none !important; }
   [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
   .card:hover .card-photo img { transform: none; }
@@ -784,9 +894,27 @@ em.accent { font-style: italic; color: inherit; }
   #nav.open .nav-links { transform: translateX(0); }
   .nav-links a { display: block; font-size: 20px; padding: 14px 0; border-bottom: 1px solid var(--line-dk); }
 
-  .hero { padding: 140px 0 120px; }
-  .hero-title { width: 100%; }
-  .hero-scroll { left: 20px; bottom: 32px; }
+  .nav-dropdown-trigger { border-bottom: none; padding-bottom: 0; }
+  .nav-dropdown-panel {
+    position: static;
+    transform: none;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    background: none;
+    border: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    padding: 0 0 10px 16px;
+    margin-top: 0;
+  }
+  .nav-dropdown-panel a { padding: 10px 0; border-bottom: none; }
+  .nav-dropdown-name { font-size: 17px; }
+
+  .hero { padding: 120px 0 84px; }
+  .hero-label { margin-bottom: clamp(70px, 12vh, 120px); }
+  .hero-scroll { bottom: 14px; }
 
   .sec { padding: 80px 0; }
 

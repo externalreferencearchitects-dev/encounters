@@ -17,6 +17,14 @@
     </button>
     <a href="#s-hero" class="nav-logo">ENCOUNTERS</a>
     <div class="nav-links" id="navLinks">
+      <div class="nav-dropdown">
+        <a href="#s-proposals" class="nav-dropdown-trigger">Designs</a>
+        <div class="nav-dropdown-panel">
+          <a href="#s-concept-nest"><span class="nav-dropdown-name">Nest</span><span class="nav-dropdown-desc">Woven scale skin, hexagonal floor</span></a>
+          <a href="#s-concept-breath"><span class="nav-dropdown-name">Breath</span><span class="nav-dropdown-desc">Solar-adaptive lattice facade</span></a>
+          <a href="#s-concept-stillness"><span class="nav-dropdown-name">Stillness</span><span class="nav-dropdown-desc">Hanging sphere canopy, low-sensory refuge</span></a>
+        </div>
+      </div>
       <a href="#s-materials">Materials</a>
       <a href="#s-cycles">Cycles</a>
       <a href="#s-lab">Lab</a>
@@ -27,20 +35,15 @@
 
   <!-- HERO -->
   <section class="hero" id="s-hero">
-    <div class="hero-bg">
-      <img src="images/nest-crowd.jpg" alt="ENCOUNTERS — pavilion at Primavera Sound">
-    </div>
-    <div class="hero-badge-row container" data-reveal>
-      <p class="section-label"><span>Urban festivals go circular</span><span class="badge-dash" aria-hidden="true"></span><span>PS 2027</span><span class="badge-dot" aria-hidden="true"></span></p>
-    </div>
-    <div class="hero-band">
-      <div class="hero-row hero-row--title container">
-        <h1 class="hero-title" data-reveal>ENCOUNTERS</h1>
-        <p class="hero-kicker" data-reveal>A space where <em class="accent">ecology</em> matters.</p>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-plate container">
+      <div class="hero-label" data-reveal>
+        <p class="hero-kicker">A space where <em class="accent">ecology</em> matters.</p>
+        <p class="hero-meta">Primavera Sound · Barcelona · 3–7 June 2027</p>
       </div>
-      <div class="hero-row hero-row--meta container">
-        <p class="hero-sub">Primavera Sound · Barcelona · 3–7 June 2027</p>
-        <span class="dot-mark" aria-hidden="true"></span>
+      <div class="hero-base" data-reveal>
+        <h1 class="hero-title">ENCOUNTERS</h1>
+        <span class="hero-dot" aria-hidden="true"></span>
       </div>
     </div>
     <a href="#s-intro" class="hero-scroll" aria-label="Scroll down">
@@ -253,9 +256,26 @@
     </div>
   </section>
 
-  <!-- BREATH: Day render -->
-  <section class="render">
-    <img src="images/breath-day.jpg" alt="Breath concept — solar-responsive lattice facade, day">
+  <!-- BREATH: Day/Night slider -->
+  <section class="render compare-section">
+    <div class="compare-wrap">
+      <img class="compare-img compare-img--night" src="images/breath-night.jpg" alt="Breath concept — night">
+      <div class="compare-clip">
+        <img class="compare-img compare-img--day" src="images/breath-day.jpg" alt="Breath concept — day">
+      </div>
+      <div class="compare-handle">
+        <div class="compare-line"></div>
+        <div class="compare-btn" aria-label="Drag to compare day and night">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <circle cx="22" cy="22" r="21" fill="rgba(0,0,0,0.45)" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"/>
+            <path d="M17 22l-5-5m0 0l5-5m-5 5h8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M27 22l5-5m0 0l-5-5m5 5h-8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      <span class="compare-label compare-label--left">Day</span>
+      <span class="compare-label compare-label--right">Night</span>
+    </div>
   </section>
 
   <!-- BREATH: Solar diagram -->
@@ -273,6 +293,11 @@
   <!-- BREATH: Interior detail -->
   <section class="render">
     <img src="images/breath-interior.jpg" alt="Breath concept — interior with hanging biomaterial swatches and hexagonal flooring">
+  </section>
+
+  <!-- BREATH: Low sensory zone -->
+  <section class="render">
+    <img src="images/breath-lowsensory.jpg" alt="Breath concept — calm cardboard tube canopy lounge">
   </section>
 
   <!-- BREATH: Seating + info signage -->
@@ -317,6 +342,40 @@
       <span class="compare-label compare-label--left">Day</span>
       <span class="compare-label compare-label--right">Night</span>
     </div>
+  </section>
+
+  <!-- STILLNESS: Colour proposal slider -->
+  <section class="sec sec--dark colour-intro">
+    <div class="container container--narrow">
+      <p class="section-label" data-reveal><span>Colour proposals</span><span class="badge-dash" aria-hidden="true"></span><span>Stillness · Canopy</span><span class="badge-dot" aria-hidden="true"></span></p>
+      <h2 class="section-title" data-reveal>Soft pastel or<br><em class="accent">blue &amp; yellow?</em></h2>
+      <p class="intro-body" data-reveal>The hanging bioplastic sphere canopy can be cast in two palettes: a soft multicolour pastel haze, or a bold blue-to-yellow gradient echoing sky and sun. Drag to compare.</p>
+    </div>
+  </section>
+  <section class="render compare-section">
+    <div class="compare-wrap">
+      <img class="compare-img compare-img--night" src="images/stillness-blueyellow-day.jpg" alt="Stillness canopy — Blue &amp; Yellow palette">
+      <div class="compare-clip">
+        <img class="compare-img" src="images/stillness-day.jpg" alt="Stillness canopy — Pastel palette">
+      </div>
+      <div class="compare-handle">
+        <div class="compare-line"></div>
+        <div class="compare-btn" aria-label="Drag to compare canopy colour palettes">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <circle cx="22" cy="22" r="21" fill="rgba(0,0,0,0.45)" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"/>
+            <path d="M17 22l-5-5m0 0l5-5m-5 5h8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M27 22l5-5m0 0l-5-5m5 5h-8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      <span class="compare-label compare-label--left">Pastel</span>
+      <span class="compare-label compare-label--right">Blue &amp; Yellow</span>
+    </div>
+  </section>
+
+  <!-- STILLNESS: Blue & Yellow interior -->
+  <section class="render">
+    <img src="images/stillness-blueyellow-interior.jpg" alt="Stillness concept — blue and yellow canopy interior with yellow seating">
   </section>
 
   <!-- STILLNESS: Low sensory zone -->
