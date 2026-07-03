@@ -1,22 +1,24 @@
 /* =====================================================
    THE SHELTER OF BECOMING
-   Warm beige + orange + yellow palette
-   Modern, minimal design with organic warmth,
-   full-width imagery, clean typography.
+   Pastel mesh palette — teal / blue / olive-gold / cream
+   carried down from the hero gradient. Dark teal ink
+   text, burnt-orange accents, film-grain texture.
    ===================================================== */
 
 :root {
-  --cream:     #F9D5B8;                     /* warm beige accent */
-  --orange:    #E8934D;                     /* warm orange highlight */
+  --cream:     #F9D5B8;                     /* warm beige — on dark chrome only (nav over hero, panels, pills) */
+  --orange:    #E8934D;                     /* warm orange — on dark chrome only */
   --yellow:    #F9C74F;                     /* bright yellow accent */
-  --dark:      #4A3728;                     /* warm brown dark */
-  --ink:       #2D1F15;                     /* warm dark text */
-  --green:     #7B9E6F;                     /* muted sage green */
-  --grey:      #8B7B73;                     /* warm grey */
-  --line-lt:   #E8D5C4;                     /* light warm line */
-  --line-dk:   rgba(244, 182, 123, 0.12);  /* orange hairline on dark */
-  --glass:     rgba(249, 213, 184, 0.08);  /* beige glass card */
-  --muted-dk:  #A89882;                     /* muted warm text on dark */
+  --dark:      #24312E;                     /* deep teal (was warm brown) — chips, active buttons */
+  --ink:       #1D2724;                     /* dark teal ink — body text on pastel */
+  --accent:    #7A420F;                     /* deep burnt orange — small text on pastel (AA) */
+  --accent-md: #9C5716;                     /* burnt orange — icons / large accents on pastel */
+  --green:     #5E7D62;                     /* muted sage green */
+  --grey:      #6B7A72;                     /* cool muted grey */
+  --line-lt:   #D9E0D5;                     /* light cool line */
+  --line-dk:   rgba(29, 39, 36, 0.16);     /* ink hairline on pastel */
+  --glass:     rgba(255, 255, 255, 0.44);  /* frosted white glass card */
+  --muted-dk:  #43524D;                     /* muted teal-grey text on pastel */
   --ff:        'Instrument Sans', 'Helvetica Neue', Arial, sans-serif;
   --ease-slow: cubic-bezier(.22, .61, .36, 1);
   --dur-slow:  1.05s;
@@ -24,28 +26,44 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background-color: #eef2dc; }
 
 body {
   font-family: var(--ff);
   font-weight: 300;
   font-size: 16px;
   line-height: 1.6;
-  color: #fff;
-  background-color: var(--dark);
+  color: var(--ink);
+  /* One very long pastel drift painted once on the body — sections are
+     transparent, so each sits on a different slice of the same gradient
+     family as the hero (teal / blue / olive-gold / cream). */
+  background-color: #e7edd8;
+  background-image: linear-gradient(180deg,
+    #eef2dc 0%,
+    #d5e5da 5%,
+    #b7d4d6 12%,
+    #cfe0cf 21%,
+    #e7e7c6 30%,
+    #d8e6d8 40%,
+    #b3d0d3 52%,
+    #d8e5cf 63%,
+    #e9e9c9 73%,
+    #c8ddd8 84%,
+    #dfe9d3 93%,
+    #eef2dc 100%);
   -webkit-font-smoothing: antialiased;
   position: relative;
 }
+/* Film grain — same feTurbulence texture as the hero, one fixed layer */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   z-index: -1;
-  background-image: url('../images/gradient-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: .16;
-  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size: 240px 240px;
+  mix-blend-mode: soft-light;
+  opacity: .45;
   pointer-events: none;
 }
 
@@ -55,9 +73,8 @@ a { color: inherit; text-decoration: none; }
 ul { list-style: none; padding: 0; }
 button { font-family: var(--ff); }
 
-:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
-.sec--light :focus-visible { outline-color: var(--ink); }
-#footer :focus-visible { outline-color: var(--ink); }
+:focus-visible { outline: 2px solid var(--accent-md); outline-offset: 3px; }
+.hero :focus-visible, #nav :focus-visible { outline-color: var(--ink); }
 
 em.accent { font-style: italic; color: inherit; }
 
@@ -72,14 +89,20 @@ em.accent { font-style: italic; color: inherit; }
   z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 20px 50px;
-  border-bottom: 1px solid var(--line-dk);
-  transition: background-color .4s;
+  border-bottom: 1px solid rgba(255, 255, 255, .14);
+  transition: background-color .4s, border-color .4s;
 }
+/* Scrolled: light pastel glass with dark ink links (page below hero is light) */
 #nav.solid {
-  background-color: rgba(74, 55, 40, 0.88);
+  background-color: rgba(238, 243, 233, 0.82);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
+  border-bottom-color: var(--line-dk);
 }
+#nav.solid .nav-links a { color: var(--ink); }
+#nav.solid .nav-logo { color: var(--accent-md); }
+#nav.solid .nav-cta { color: var(--accent) !important; }
+#nav.solid .hamb span { background-color: var(--ink); }
 .nav-logo {
   font-size: 18px;
   font-weight: 500;
@@ -118,10 +141,10 @@ em.accent { font-style: italic; color: inherit; }
   width: 280px;
   padding: 10px;
   margin-top: 14px;
-  background-color: rgba(32, 25, 20, .96);
+  background-color: rgba(23, 34, 31, .96);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  border: 1px solid var(--line-dk);
+  border: 1px solid rgba(255, 255, 255, .12);
   border-radius: 12px;
   opacity: 0;
   visibility: hidden;
@@ -151,9 +174,11 @@ em.accent { font-style: italic; color: inherit; }
 .nav-dropdown-desc {
   font-size: 12.5px;
   font-weight: 300;
-  color: var(--muted-dk);
+  color: #AEBBB4; /* light muted — panel stays dark teal glass */
   line-height: 1.4;
 }
+/* Dropdown panel is always dark — keep its links light even when nav is solid */
+#nav.solid .nav-dropdown-panel a { color: #fff; }
 .nav-cta { color: var(--cream) !important; }
 
 .hamb { display: none; }
@@ -207,19 +232,19 @@ em.accent { font-style: italic; color: inherit; }
   pointer-events: none;
   background: linear-gradient(to bottom, rgba(28, 47, 49, .5), rgba(28, 47, 49, 0));
 }
-/* Bottom fade: bridges the pastel hero into the dark intro section */
+/* Bottom fade: bridges the hero seamlessly into the page's pastel drift
+   (#eef2dc is the body gradient's first stop) */
 .hero::after {
   content: '';
   position: absolute; left: 0; right: 0; bottom: 0;
-  height: 230px;
+  height: 200px;
   z-index: 1;
   pointer-events: none;
   background: linear-gradient(to bottom,
-    rgba(74, 55, 40, 0) 0%,
-    rgba(74, 55, 40, .05) 42%,
-    rgba(74, 55, 40, .22) 64%,
-    rgba(74, 55, 40, .6) 82%,
-    var(--dark) 100%);
+    rgba(238, 242, 220, 0) 0%,
+    rgba(238, 242, 220, .35) 55%,
+    rgba(238, 242, 220, .8) 82%,
+    #eef2dc 100%);
 }
 
 .hero-plate { position: relative; z-index: 2; }
@@ -269,11 +294,11 @@ em.accent { font-style: italic; color: inherit; }
   z-index: 2;
   width: 44px; height: 44px;
   display: flex; align-items: center; justify-content: center;
-  color: rgba(249, 213, 184, .9);
+  color: rgba(29, 39, 36, .65);
   animation: bob 2.8s ease-in-out infinite;
   transition: color .4s;
 }
-.hero-scroll:hover { color: #fff; }
+.hero-scroll:hover { color: var(--ink); }
 @keyframes bob {
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(6px); }
@@ -281,8 +306,10 @@ em.accent { font-style: italic; color: inherit; }
 
 /* ── SECTIONS ───────────────────────── */
 .sec { padding: 120px 0; }
-.sec--dark  { background-color: var(--dark); color: #fff; }
-.sec--light { background-color: #fff; color: var(--ink); }
+/* "dark" sections are now transparent — the body's pastel drift shows through */
+.sec--dark  { color: var(--ink); }
+/* "light" sections read as frosted paper — a hint of the drift bleeds through */
+.sec--light { background-color: rgba(255, 255, 255, .66); color: var(--ink); }
 .colour-intro { padding-bottom: 80px; }
 
 /* Eyebrow — rekrill "claim-text": uppercase + small mark icon */
@@ -292,7 +319,7 @@ em.accent { font-style: italic; color: inherit; }
   font-size: 15px;
   font-weight: 300;
   letter-spacing: .05em;
-  color: var(--cream);
+  color: var(--accent);
   margin-bottom: 28px;
 }
 .section-label::before {
@@ -302,30 +329,25 @@ em.accent { font-style: italic; color: inherit; }
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 1v22M2.5 6.5l19 11M21.5 6.5l-19 11' stroke='%23000' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 1v22M2.5 6.5l19 11M21.5 6.5l-19 11' stroke='%23000' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
 }
-.sec--light .section-label { color: var(--ink); }
-
 .section-title, .pitch-title {
   font-size: clamp(32px, 5vw, 60px);
   font-weight: 300;
   line-height: 1.17;
-  color: var(--cream);
+  color: var(--ink);
   margin-bottom: 40px;
 }
-.sec--light .section-title { color: var(--ink); }
 
 .intro-body {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.6;
-  color: #fff;
+  color: var(--ink);
   max-width: 56ch;
   margin-bottom: 48px;
 }
-.sec--light .intro-body { color: var(--ink); }
 
 .body-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.body-cols p { font-size: 18px; font-weight: 300; line-height: 1.6; color: #fff; }
-.sec--light .body-cols p { color: var(--ink); }
+.body-cols p { font-size: 18px; font-weight: 300; line-height: 1.6; color: var(--ink); }
 
 /* ── FULL-BLEED RENDERS ─────────────── */
 .render { height: 100svh; min-height: 480px; overflow: hidden; }
@@ -343,12 +365,14 @@ em.accent { font-style: italic; color: inherit; }
   margin-top: 60px;
 }
 .cards-6 .card-content { padding: 24px 26px 28px; }
-.cards-6 .card-content h3 { font-size: 19px; font-weight: 500; color: var(--cream); margin-bottom: 10px; }
+.cards-6 .card-content h3 { font-size: 19px; font-weight: 500; color: var(--ink); margin-bottom: 10px; }
 .cards-6 .card-content p { font-size: 14.5px; line-height: 1.65; color: var(--muted-dk); margin-bottom: 16px; }
 .card {
   background-color: var(--glass);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, .55);
+  box-shadow: 0 1px 3px rgba(29, 39, 36, .06);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -367,7 +391,7 @@ em.accent { font-style: italic; color: inherit; }
 
 .card h3 {
   font-size: 20px; font-weight: 500;
-  color: var(--cream);
+  color: var(--ink);
   margin-bottom: 10px;
 }
 .card p { font-size: 15px; font-weight: 300; line-height: 1.5; color: var(--muted-dk); }
@@ -375,12 +399,12 @@ em.accent { font-style: italic; color: inherit; }
 .card-num {
   display: block;
   font-size: 15px; font-weight: 300;
-  color: var(--cream);
+  color: var(--accent);
   margin-bottom: 16px;
 }
 .card-list li {
   font-size: 15px; font-weight: 300; line-height: 1.5;
-  color: #fff;
+  color: var(--ink);
   padding: 10px 0;
   border-bottom: 1px solid var(--line-dk);
 }
@@ -443,12 +467,12 @@ em.accent { font-style: italic; color: inherit; }
   text-transform: uppercase;
   font-size: 12px; font-weight: 500; letter-spacing: .1em;
   color: var(--cream);
-  background-color: rgba(32, 25, 20, .5);
+  background-color: rgba(20, 29, 27, .5);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   padding: 7px 16px;
   border-radius: 50px;
-  border: 1px solid var(--line-dk);
+  border: 1px solid rgba(255, 255, 255, .2);
 }
 .compare-label--left  { left: 24px; }
 .compare-label--right { right: 24px; }
@@ -514,7 +538,10 @@ em.accent { font-style: italic; color: inherit; }
   background-color: var(--green);
   padding: 100px 50px 120px;
 }
-.flooring-text .section-title { margin-bottom: 48px; }
+/* Green panel stays dark-toned — keep light text inside it */
+.flooring-text .section-title { margin-bottom: 48px; color: #fff; }
+.flooring-text .section-label { color: rgba(255, 255, 255, .85); }
+.flooring-text .material-tag { color: var(--cream); border-color: rgba(255, 255, 255, .3); }
 .flooring-text h3 {
   font-size: 24px; font-weight: 400;
   color: var(--cream);
@@ -530,7 +557,7 @@ em.accent { font-style: italic; color: inherit; }
   display: inline-flex; align-items: center; column-gap: 10px;
   text-transform: uppercase;
   font-size: 12px; font-weight: 500; letter-spacing: .08em;
-  color: var(--cream);
+  color: var(--accent);
   border: 1px solid var(--line-dk);
   padding: 8px 18px;
   border-radius: 50px;
@@ -553,57 +580,57 @@ em.accent { font-style: italic; color: inherit; }
   border-bottom: 2px solid transparent;
   padding: 14px 20px;
   font-size: 15px; font-weight: 400;
-  color: rgba(255, 255, 255, .6);
+  color: rgba(29, 39, 36, .62);
   cursor: pointer; margin-bottom: -1px;
   transition: color .4s, border-color .4s;
 }
-.tab-btn:hover { color: #fff; }
-.tab-btn.active { color: var(--cream); border-bottom-color: var(--cream); font-weight: 500; }
+.tab-btn:hover { color: var(--ink); }
+.tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 500; }
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
 
 .tab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
 .tab-left h3 {
   font-size: 24px; font-weight: 400;
-  color: var(--cream);
+  color: var(--ink);
   margin-bottom: 20px; line-height: 1.25;
 }
-.tab-left p { font-size: 16px; font-weight: 300; line-height: 1.6; color: #fff; margin-bottom: 16px; }
+.tab-left p { font-size: 16px; font-weight: 300; line-height: 1.6; color: var(--ink); margin-bottom: 16px; }
 .tab-left blockquote {
-  border-left: 1px solid var(--line-dk);
+  border-left: 1px solid var(--accent-md);
   padding-left: 24px; margin-top: 28px;
   font-size: 18px; font-weight: 300; font-style: italic;
   line-height: 1.6;
-  color: var(--cream);
+  color: var(--ink);
 }
 .tab-left blockquote cite {
   display: block; font-style: normal;
   font-size: 13px; font-weight: 400;
-  color: rgba(255, 255, 255, .6);
+  color: var(--muted-dk);
   margin-top: 10px;
 }
 
 .facts-label {
   text-transform: uppercase;
   font-size: 14px; font-weight: 400; letter-spacing: .06em;
-  color: rgba(255, 255, 255, .6);
+  color: var(--muted-dk);
   margin-bottom: 14px;
 }
 .facts-list li {
   display: flex; justify-content: space-between; align-items: center;
   padding: 12px 0;
   border-bottom: 1px solid var(--line-dk);
-  font-size: 15px; font-weight: 300; color: #fff;
+  font-size: 15px; font-weight: 300; color: var(--ink);
 }
-.facts-list li span:last-child { font-weight: 500; color: var(--cream); }
+.facts-list li span:last-child { font-weight: 500; color: var(--accent); }
 .facts-types li { padding: 14px 0; border-bottom: 1px solid var(--line-dk); }
 .facts-types li strong {
   display: block;
   font-size: 15px; font-weight: 500;
-  color: var(--cream);
+  color: var(--ink);
   margin-bottom: 4px;
 }
-.facts-types li span { font-size: 15px; font-weight: 300; line-height: 1.5; color: #fff; }
+.facts-types li span { font-size: 15px; font-weight: 300; line-height: 1.5; color: var(--muted-dk); }
 
 /* ── PRINCIPLES — big hairline rows (light) ── */
 .principles { border-top: 1px solid var(--line-lt); margin-top: 48px; }
@@ -630,22 +657,22 @@ em.accent { font-style: italic; color: inherit; }
   position: absolute;
   width: 380px; height: 380px;
   right: -80px; bottom: -80px;
-  opacity: .1;
-  color: var(--cream);
+  opacity: .12;
+  color: var(--ink);
   pointer-events: none;
 }
 .pitch-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 48px; }
 .pitch-tags span {
   font-size: 14px; font-weight: 400;
-  color: #fff;
-  border: 1px solid var(--line-dk);
+  color: var(--ink);
+  border: 1px solid rgba(29, 39, 36, .3);
   padding: 8px 20px;
   border-radius: 50px;
 }
 
-/* ── FOOTER — white, rekrill treatment ── */
+/* ── FOOTER — frosted paper over the pastel drift ── */
 #footer {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, .7);
   color: var(--ink);
   padding: 120px 0 40px;
 }
@@ -719,7 +746,7 @@ em.accent { font-style: italic; color: inherit; }
 /* ── LIGHTBOX ───────────────────────── */
 .lightbox {
   display: none; position: fixed; inset: 0;
-  background-color: rgba(32, 25, 20, .97);
+  background-color: rgba(20, 29, 27, .97);
   z-index: 200;
   align-items: center; justify-content: center;
   cursor: zoom-out;
@@ -733,7 +760,7 @@ em.accent { font-style: italic; color: inherit; }
 }
 .lightbox-close {
   position: absolute; top: 24px; right: 28px;
-  background-color: var(--glass);
+  background-color: rgba(255, 255, 255, .14);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border: none;
@@ -762,24 +789,25 @@ em.accent { font-style: italic; color: inherit; }
   padding: 40px 32px;
   border-radius: 16px;
   background-color: var(--glass);
-  border: 1px solid var(--line-dk);
+  border: 1px solid rgba(255, 255, 255, .55);
+  box-shadow: 0 1px 3px rgba(29, 39, 36, .06);
   transition: transform .4s, background-color .4s, border-color .4s;
 }
 .proposal-card:hover {
   transform: translateY(-6px);
-  background-color: rgba(232, 147, 77, 0.08);
-  border-color: var(--orange);
+  background-color: rgba(255, 255, 255, .62);
+  border-color: var(--accent-md);
 }
 .proposal-card .concept-icon {
   width: 56px;
   height: 56px;
-  color: var(--orange);
+  color: var(--accent-md);
   margin-bottom: 20px;
 }
 .proposal-card h3 {
   font-size: 22px;
   font-weight: 500;
-  color: var(--cream);
+  color: var(--ink);
   margin-bottom: 12px;
 }
 .proposal-card p {
@@ -802,8 +830,8 @@ em.accent { font-style: italic; color: inherit; }
   width: 48px;
   height: 48px;
   flex-shrink: 0;
-  color: var(--orange);
-  opacity: 0.85;
+  color: var(--accent-md);
+  opacity: 0.9;
 }
 
 .concept-name {
@@ -811,7 +839,7 @@ em.accent { font-style: italic; color: inherit; }
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--accent);
 }
 
 /* ── ART SECTION ────────────────────── */
@@ -820,7 +848,7 @@ em.accent { font-style: italic; color: inherit; }
 .art-lead {
   font-size: 20px;
   line-height: 1.7;
-  color: var(--cream);
+  color: var(--ink);
   max-width: 760px;
   margin-bottom: 32px;
 }
@@ -829,9 +857,9 @@ em.accent { font-style: italic; color: inherit; }
   font-size: 18px;
   line-height: 1.8;
   font-style: italic;
-  color: var(--cream);
+  color: var(--ink);
   margin: 32px 0 48px;
-  border-left: 2px solid var(--orange);
+  border-left: 2px solid var(--accent-md);
   padding-left: 24px;
   max-width: 760px;
 }
@@ -902,7 +930,7 @@ em.accent { font-style: italic; color: inherit; }
     top: 60px; left: 0;
     width: 100%; height: calc(100vh - 60px);
     display: block;
-    background-color: rgba(32, 25, 20, .85);
+    background-color: rgba(23, 34, 31, .9);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     padding: 30px 20px 80px;
@@ -911,7 +939,10 @@ em.accent { font-style: italic; color: inherit; }
     transition: transform .4s;
   }
   #nav.open .nav-links { transform: translateX(0); }
-  .nav-links a { display: block; font-size: 20px; padding: 14px 0; border-bottom: 1px solid var(--line-dk); }
+  .nav-links a { display: block; font-size: 20px; padding: 14px 0; border-bottom: 1px solid rgba(255, 255, 255, .14); }
+  /* Mobile menu panel is always dark teal — keep links light even when nav is solid */
+  #nav.solid .nav-links a { color: #fff; }
+  #nav.solid .nav-cta { color: var(--cream) !important; }
 
   .nav-dropdown-trigger { border-bottom: none; padding-bottom: 0; }
   .nav-dropdown-panel {
