@@ -764,6 +764,7 @@ em.accent { font-style: italic; color: inherit; }
   transition: opacity .4s, filter .4s;
 }
 .footer-logos img.logo-lg { height: 46px; }
+.footer-logos img.logo-splash { height: 72px; }
 .footer-logos img.logo-sm { height: 26px; }
 .footer-logos img:hover { opacity: 1; filter: grayscale(0); }
 
