@@ -743,7 +743,7 @@ em.accent { font-style: italic; color: inherit; }
 
 .footer-logos {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   flex-wrap: wrap;
   column-gap: 64px;
@@ -751,13 +751,14 @@ em.accent { font-style: italic; color: inherit; }
   margin-top: 56px;
 }
 .footer-logos img {
-  height: 34px;
   width: auto;
   object-fit: contain;
   filter: grayscale(1);
   opacity: .7;
   transition: opacity .4s, filter .4s;
 }
+.footer-logos img.logo-lg { height: 46px; }
+.footer-logos img.logo-sm { height: 26px; }
 .footer-logos img:hover { opacity: 1; filter: grayscale(0); }
 
 .footer-grid {
