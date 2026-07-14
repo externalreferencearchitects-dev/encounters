@@ -423,13 +423,14 @@ em.accent { font-style: italic; color: inherit; }
   margin-top: 60px;
 }
 .cards-6 {
-  display: grid; grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
   margin-top: 60px;
 }
-.cards-6 .card-content { padding: 24px 26px 28px; }
-.cards-6 .card-content h3 { font-size: 19px; font-weight: 500; color: var(--ink); margin-bottom: 10px; }
-.cards-6 .card-content p { font-size: 14.5px; line-height: 1.65; color: var(--muted-dk); margin-bottom: 16px; }
+.cards-6 .card-content { padding: 16px 16px 20px; }
+.cards-6 .card-content h3 { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+.cards-6 .card-content p { font-size: 13px; line-height: 1.5; color: var(--muted-dk); margin-bottom: 12px; }
+.cards-6 .material-tag { font-size: 10.5px; padding: 6px 12px; }
 .card {
   background-color: var(--glass);
   -webkit-backdrop-filter: blur(20px);
