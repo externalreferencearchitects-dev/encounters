@@ -231,7 +231,7 @@
       'refugio-badge': 'Alternative concept',
       'refugio-title': 'Refugio <em class="accent">Sensorial.</em>',
       'refugio-body1': 'As a final note, we want to share Refugio Sensorial — a concept that can be added to Encounters as a space: a low-stimulation lounge of woven fibre and soft texture, built for acoustic and sensory rest.',
-      'refugio-body2': 'It can be added to the current design of Encounters as a feature. We’re developing it in collaboration with a neuroarchitect, and it’s intended to support neurodivergent communities with a dedicated space for lower sensory stimulation.',
+      'refugio-body2': 'We’re developing it in collaboration with a neuroarchitect, and it’s intended to support neurodivergent communities with a dedicated space for lower sensory stimulation.',
 
       'footer-tagline': 'A space where ecology matters.<br>Primavera Sound · Barcelona · 3–7 June 2027',
       'footer-heading-project': 'Project',
@@ -469,7 +469,7 @@
       'refugio-badge': 'Concepto alternativo',
       'refugio-title': 'Refugio <em class="accent">Sensorial.</em>',
       'refugio-body1': 'Como nota final, queremos compartir Refugio Sensorial — un concepto que puede añadirse a Encounters como un espacio: un lugar de baja estimulación en fibra tejida y textura suave, pensado para el descanso acústico y sensorial.',
-      'refugio-body2': 'Puede incorporarse al diseño actual de Encounters como una función. Lo estamos desarrollando en colaboración con una neuroarquitecta, y está pensado para apoyar a las comunidades neurodivergentes con un espacio dedicado de menor estimulación sensorial.',
+      'refugio-body2': 'Lo estamos desarrollando en colaboración con una neuroarquitecta, y está pensado para apoyar a las comunidades neurodivergentes con un espacio dedicado de menor estimulación sensorial.',
 
       'footer-tagline': 'Un espacio donde la ecología importa.<br>Primavera Sound · Barcelona · 3–7 de junio de 2027',
       'footer-heading-project': 'Proyecto',
