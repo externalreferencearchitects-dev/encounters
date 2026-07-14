@@ -231,7 +231,7 @@
       'refugio-badge': 'Alternative concept',
       'refugio-title': 'Refugio <em class="accent">Sensorial.</em>',
       'refugio-body1': 'Within the intensity of a concert, silence also exists. For those who experience the world through a neurodivergent sensitivity, pausing is part of the experience. This refuge is conceived as a moment of calm—a place where body and mind can regain balance before returning to the collective encounter.',
-      'refugio-body2': 'Built from cardboard tubes reclaimed from the fashion industry, filled with fabric offcuts, and grounded by a living mycelium floor, the space transforms discarded materials into care. Matter ceases to be waste and becomes shelter, revealing how architecture can embrace diversity and make calm an act of inclusion.',
+      'refugio-body2': 'Built from cardboard tubes reclaimed from the fashion industry, filled with fabric offcuts, and grounded by a living mycelium floor, the space transforms discarded materials into care. Matter ceases to be waste and becomes shelter, revealing how architecture can embrace diversity and make calm an act of inclusion. It can be added to the existing design of Encounters as a feature.',
 
       'footer-tagline': 'A space where ecology matters.<br>Primavera Sound · Barcelona · 3–7 June 2027',
       'footer-heading-project': 'Project',
@@ -469,7 +469,7 @@
       'refugio-badge': 'Concepto alternativo',
       'refugio-title': 'Refugio <em class="accent">Sensorial.</em>',
       'refugio-body1': 'Dentro de la intensidad de un concierto, también existe el silencio. Para quienes experimentan el mundo a través de una sensibilidad neurodivergente, hacer una pausa forma parte de la experiencia. Este refugio está concebido como un momento de calma: un lugar donde el cuerpo y la mente pueden recuperar el equilibrio antes de volver al encuentro colectivo.',
-      'refugio-body2': 'Construido con tubos de cartón recuperados de la industria de la moda, rellenos de retales de tela y asentado sobre un suelo vivo de micelio, el espacio transforma materiales descartados en cuidado. La materia deja de ser residuo y se convierte en refugio, revelando cómo la arquitectura puede abrazar la diversidad y convertir la calma en un acto de inclusión.',
+      'refugio-body2': 'Construido con tubos de cartón recuperados de la industria de la moda, rellenos de retales de tela y asentado sobre un suelo vivo de micelio, el espacio transforma materiales descartados en cuidado. La materia deja de ser residuo y se convierte en refugio, revelando cómo la arquitectura puede abrazar la diversidad y convertir la calma en un acto de inclusión. Puede añadirse al diseño actual de Encounters como una función.',
 
       'footer-tagline': 'Un espacio donde la ecología importa.<br>Primavera Sound · Barcelona · 3–7 de junio de 2027',
       'footer-heading-project': 'Proyecto',
